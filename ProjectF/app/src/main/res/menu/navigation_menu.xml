@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group>
+
+        <item
+            android:id="@+id/menu_list"
+            android:icon="@drawable/ic_list"
+            android:title="@string/Menu_list"/>
+
+        <item
+            android:id="@+id/menu_api"
+            android:icon="@drawable/ic_review"
+            android:title="@string/Menu_api"/>
+
+        <item
+            android:id="@+id/menu_book"
+            android:icon="@drawable/ic_book"
+            android:title="@string/Menu_book"/>
+
+    </group>
+
+    <item android:title="@string/Menu_setting">
+
+        <menu>
+
+            <item
+                android:id="@+id/menu_setting"
+                android:icon="@drawable/ic_settings"
+                android:title="@string/Personal_setting"/>
+
+        </menu>
+
+    </item>
+
+</menu>

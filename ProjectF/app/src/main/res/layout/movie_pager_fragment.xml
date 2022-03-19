@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@drawable/main_background">
+
+    <ImageView
+        android:id="@+id/moviePagerFragmentPoster"
+        android:layout_width="300dp"
+        android:layout_height="400dp"
+        android:layout_marginBottom="15dp" />
+
+    <TextView
+        android:id="@+id/moviePagerFragmentName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:textColor="#ffffff"
+        android:layout_marginBottom="15dp" />
+
+    <TextView
+        android:id="@+id/moviePagerFragmentMain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15dp"
+        android:textColor="#ffffff"
+        android:layout_marginBottom="15dp" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/home_slider1"
+        android:layout_marginBottom="15dp" />
+
+    <Button
+        android:id="@+id/moviePagerFragmentButton"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:background="@drawable/reservate_icon_background"
+        android:text="@string/View_more"
+        android:textColor="#ffffff"
+        android:textSize="20dp" />
+
+</LinearLayout>

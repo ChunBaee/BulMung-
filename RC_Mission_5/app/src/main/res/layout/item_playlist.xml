@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="15sp"
+        android:paddingVertical="7sp"
+        android:background="@color/no_color">
+
+        <ImageView
+            android:id="@+id/playlist_img"
+            android:layout_width="45sp"
+            android:layout_height="45sp"
+            android:background="@drawable/round_border"
+            android:src="@drawable/img_back_exam"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"/>
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/play_animation"
+            android:layout_width="45sp"
+            android:layout_height="45sp"
+            android:background="@drawable/lotti_background"
+            android:visibility="gone"
+            app:lottie_fileName="lf30_editor_eri9wujc.json"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent" />
+
+        <TextView
+            android:id="@+id/playlist_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="제 목"
+            android:textSize="16sp"
+            android:textColor="@color/white"
+            android:layout_marginLeft="10sp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/playlist_singer"
+            app:layout_constraintLeft_toRightOf="@id/playlist_img" />
+
+        <TextView
+            android:id="@+id/playlist_singer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="가 수"
+            android:textSize="13sp"
+            android:textColor="@color/gray"
+            android:layout_marginLeft="10sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/playlist_title"
+            app:layout_constraintLeft_toRightOf="@id/playlist_img" />
+
+        <ImageView
+            android:layout_width="17sp"
+            android:layout_height="17sp"
+            android:src="@drawable/icon_more_info"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

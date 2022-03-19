@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">E_Vap</string>
+
+    <string-array name="chgerStat" >
+        <item> 충전기 상태 </item>
+        <item> 통신 이상 </item>
+        <item> 충전 대기 </item>
+        <item> 충전중 </item>
+        <item> 운영 중지 </item>
+        <item> 점검중 </item>
+        <item> 상태 미확인 </item>
+    </string-array>
+
+    <string-array name="chgerType">
+        <item> AC 완속 </item>
+        <item> DC 차데모 </item>
+        <item> DC 콤보 </item>
+        <item> AC 3상 </item>
+    </string-array>
+
+    <string-array name="appInfoList">
+        <item> 앱 기능 알아보기 </item>
+        <item> 지도 관련 </item>
+        <item> 설정 관련 </item>
+    </string-array>
+
+</resources>

@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Experience</string>
+
+    <string name="finedust_url">http://apis.data.go.kr/B552584/ArpltnInforInqireSvc/getMsrstnAcctoRltmMesureDnsty</string>
+    <string name="weather_url">	http://apis.data.go.kr/1360000/VilageFcstInfoService_2.0</string>
+
+    <string name="api_key">mS%2BJm4ryE9IQLhsedrzyXNRDQi3aqCSUuFRAMFx6hW%2BIVn7tnoEU97t8qwrpVyrJVp9RrZPFld%2B9kYbIGuw7rw%3D%3D</string>
+
+</resources>

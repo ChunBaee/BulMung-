@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="채팅"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:gravity="start" />
+
+
+            <ImageButton
+                android:layout_width="25sp"
+                android:layout_height="25sp"
+                android:background="@drawable/icon_setting"
+                android:layout_marginEnd="15sp"
+                android:layout_gravity="end" />
+
+            <ImageButton
+                android:layout_width="25sp"
+                android:layout_height="25sp"
+                android:background="@drawable/icon_addchat"
+                android:layout_marginEnd="13sp"
+                android:layout_gravity="end" />
+
+            <ImageButton
+                android:layout_width="25sp"
+                android:layout_height="25sp"
+                android:background="@drawable/icon_search"
+                android:layout_marginEnd="15sp"
+                android:layout_gravity="end" />
+
+        </com.google.android.material.appbar.MaterialToolbar>
+
+
+        <ImageView
+            android:id="@+id/img_ad"
+            android:layout_width="0sp"
+            android:layout_height="0sp"
+            android:src="@drawable/img_ad"
+            app:layout_constraintWidth_percent="0.925"
+            app:layout_constraintHeight_percent="0.09"
+            app:layout_constraintTop_toBottomOf="@id/toolbar"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_view"
+            android:layout_width="0sp"
+            android:layout_height="wrap_content"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            android:orientation="vertical"
+            android:layout_marginTop="10sp"
+            app:layout_constraintTop_toBottomOf="@id/img_ad"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"/>
+
+
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottomView"
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:menu="@menu/menu_bottom"
+            app:labelVisibilityMode="unlabeled"
+            app:itemIconTint="@color/black" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

@@ -1,0 +1,49 @@
+<resources>
+    <string name="app_name">RC_Challenge</string>
+
+    <string name="View">뷰</string>
+    <string name="MyView">My뷰</string>
+
+    <string name="mainTab_1st">발견</string>
+    <string name="mainTab_2nd">어피치선물</string>
+    <string name="mainTab_3rd">코로나19</string>
+    <string name="mainTab_4th">잔여백신</string>
+    <string name="mainTab_5th">카카오TV</string>
+
+    <string name="Card_moneyGrab">머니그랩</string>
+    <string name="moneyGrab_title">12월 25일부터 의무적으로 시행됩니다. \'과태료 30만원\'</string>
+    <string name="moneyGrab_time">1시간 전</string>
+    <string name="moneyGrab_content">분리 배출 규정을 어기면 최대 30만 원의 과태료가 부과될 수 있습니다.오른쪽위 친구추가 하시고 돈 되는 정보 받아가세요.</string>
+
+    <string name="sinseon_title">[신선한 경제] 투명 페트병 분리배출 안 하면 과태료 30만 원</string>
+    <string name="MBC">MBC</string>
+
+    <string name="qna_title">Q&amp;A로 알아보는 비닐ㆍ투명페트병 분리배출제</string>
+    <string name="SeoulC">서울씨</string>
+
+    <string name="see_more">1개 더보기 ∨ </string>
+
+    <string name="do_share">공유하기</string>
+    <string name="like_this">좋아요</string>
+    <string name="like_count">2</string>
+
+    <string name="Card_pisik">피식피식</string>
+    <string name="pisik_title">1일 1유머</string>
+    <string name="pisik_time">1일 전</string>
+    <string name="pisik_content">무작위로 선별한 오늘의 인기글!&#x1f60a;</string>
+
+    <string name="company_title">회사밥 논쟁</string>
+    <string name="zzokbbang">쭉빵카페</string>
+
+    <string name="dangun_title">화가 많이 난 당근마켓 판매자.jpg</string>
+    <string name="ejong">이종격투기</string>
+    <string name="see_more_1">3개 더보기 ∨ </string>
+    <string name="like_count_1">391</string>
+
+    <string name="friendList">친구</string>
+    <string name="chatList">채팅</string>
+    <string name="viewList">뷰</string>
+    <string name="shopList">쇼핑</string>
+    <string name="settingList">더보기</string>
+
+</resources>

@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "754604189472",
+    "project_id": "mrio-3a9fc",
+    "storage_bucket": "mrio-3a9fc.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:754604189472:android:3158aa3223e8cf3cdb5945",
+        "android_client_info": {
+          "package_name": "com.solie.mrio"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "754604189472-9gk9etbba1cvff6fhhb06o7rv86he11m.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.solie.mrio",
+            "certificate_hash": "41342a194d7b2e339be97fc1ae8c1d68db4f826c"
+          }
+        },
+        {
+          "client_id": "754604189472-cdvgi5v2s0odamurube7r7c92hvsjsi7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDUguq-WNA8nYWKaW0rNAtO83o8l3CV2lc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "754604189472-cdvgi5v2s0odamurube7r7c92hvsjsi7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths xmlns:android="http://schemas.android.com/apk/res/android">
+    <external-files-path
+        name="share"
+        path="Pictures/" />
+    //외부 저장소 Pictures 폴더의 컨텐츠 Uri는 content://패키지명/share/ 가 됩니다.
+</paths>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/border"
+    android:layout_margin="5dp" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="5dp">
+
+            <TextView
+                android:id="@+id/replyShapeNick"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nick"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:layout_marginLeft="10dp"/>
+
+            <TextView
+                android:id="@+id/replyShapeTime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Time"
+                android:textSize="15dp"
+                android:gravity="center_vertical|right"
+                android:layout_marginRight="15dp" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/replyShapeContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Content"
+            android:background="@drawable/border"
+            android:layout_marginTop="5dp"
+            android:layout_marginHorizontal="10dp"
+            android:padding="5dp"
+            android:gravity="start"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="댓글달기"
+            android:layout_gravity="right"
+            android:layout_marginVertical="5dp"
+            android:layout_marginRight="10dp" />
+
+    </LinearLayout>
+
+
+
+</LinearLayout>
+</layout>

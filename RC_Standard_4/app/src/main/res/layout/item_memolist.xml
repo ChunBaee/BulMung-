@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/memo_less_dark"
+        android:paddingVertical="10sp">
+
+        <TextView
+            android:id="@+id/memoList_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TITLE"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:ellipsize="end"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent" />
+
+        <TextView
+            android:id="@+id/memoList_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="date"
+            android:textSize="15sp"
+            android:textColor="@color/memo_gray"
+            app:layout_constraintTop_toBottomOf="@id/memoList_title"
+            app:layout_constraintLeft_toLeftOf="parent" />
+
+        <TextView
+            android:id="@+id/memoList_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="content"
+            android:textSize="15sp"
+            android:textColor="@color/memo_gray"
+            android:ellipsize="end"
+            android:layout_marginStart="10sp"
+            app:layout_constraintTop_toBottomOf="@id/memoList_title"
+            app:layout_constraintLeft_toRightOf="@id/memoList_date" />
+        
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MainActivity">
+
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.appbar.AppBarLayout
+                android:id="@+id/TopView"
+                android:layout_width="match_parent"
+                android:layout_height="?actionBarSize"
+                android:background="@color/default_background_color">
+
+                <com.google.android.material.appbar.CollapsingToolbarLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:contentScrim="@color/default_background_color"
+                    app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+                    <ImageView
+                        android:id="@+id/btn_toolbar_logo"
+                        android:layout_width="35sp"
+                        android:layout_height="35sp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="20sp"
+                        android:src="@drawable/icon_melon" />
+
+                    <ImageView
+                        android:id="@+id/btn_toolbar_menu"
+                        android:layout_width="30sp"
+                        android:layout_height="30sp"
+                        android:layout_gravity="end|center_vertical"
+                        android:layout_marginEnd="20sp"
+                        android:src="@drawable/icon_menu" />
+
+                    <ImageView
+                        android:layout_width="45sp"
+                        android:layout_height="30sp"
+                        android:layout_gravity="end|center_vertical"
+                        android:layout_marginEnd="75sp"
+                        android:src="@drawable/icon_ticket" />
+
+                </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+            </com.google.android.material.appbar.AppBarLayout>
+
+            <FrameLayout
+                android:id="@+id/MainContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <include layout="@layout/layout_play_min"
+                android:id="@+id/play_layout"
+                android:layout_width="match_parent"
+                android:layout_height="?actionBarSize"
+                android:layout_gravity="bottom"
+                android:layout_marginBottom="?actionBarSize"/>
+
+            <View
+                android:id="@+id/bottomDivider"
+                android:layout_width="match_parent"
+                android:layout_height="0.5sp"
+                android:background="@color/gray"
+                android:layout_gravity="bottom"
+                android:layout_marginBottom="?actionBarSize"/>
+
+            <com.google.android.material.bottomnavigation.BottomNavigationView
+                android:id="@+id/bottomView"
+                android:layout_width="match_parent"
+                android:layout_height="?actionBarSize"
+                android:layout_gravity="bottom"
+                android:background="@color/default_background_color"
+                android:foregroundTint="@color/white"
+                app:itemIconTint="@drawable/menu_selector_color"
+                app:labelVisibilityMode="unlabeled"
+                app:menu="@menu/bottom_menu" />
+
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</layout>

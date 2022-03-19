@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="7sp"
+        android:background="@color/default_background_color">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/rv_album_layout"
+            android:layout_width="160sp"
+            android:layout_height="160sp"
+            app:cardCornerRadius="5sp"
+            android:elevation="0sp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent">
+
+            <ImageView
+                android:id="@+id/rv_album"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/img_back_exam" />
+
+            <ImageView
+                android:layout_width="20sp"
+                android:layout_height="20sp"
+                android:src="@drawable/icon_play"
+                android:layout_gravity="top|right"
+                android:layout_margin="5sp"/>
+
+        </com.google.android.material.card.MaterialCardView>
+
+       <TextView
+           android:id="@+id/rv_title"
+           android:layout_width="150sp"
+           android:layout_height="wrap_content"
+           android:text="TITLE"
+           android:textColor="@color/white"
+           android:textSize="15sp"
+           app:layout_constraintTop_toBottomOf="@id/rv_album_layout"
+           app:layout_constraintLeft_toLeftOf="parent"
+           android:maxLines="2"
+           android:ellipsize="end" />
+
+        <TextView
+            android:id="@+id/rv_hashtag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="#아이들"
+            android:textColor="@color/gray"
+            app:layout_constraintTop_toBottomOf="@id/rv_title"
+            app:layout_constraintLeft_toLeftOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

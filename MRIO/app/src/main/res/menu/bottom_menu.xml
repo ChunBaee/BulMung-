@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+        <item
+            android:id="@+id/menu_find_list"
+            android:title="find_list"
+            android:icon="@drawable/ic_launcher_foreground" />
+
+        <item
+            android:id="@+id/menu_accept_list"
+            android:title="accept_list"
+            android:icon="@drawable/ic_launcher_foreground" />
+
+        <item
+            android:id="@+id/menu_chat_list"
+            android:title="chat_list"
+            android:icon="@drawable/ic_launcher_foreground" />
+
+        <item
+            android:id="@+id/menu_setting"
+            android:title="setting"
+            android:icon="@drawable/ic_launcher_foreground"/>
+
+</menu>

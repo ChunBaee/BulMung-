@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:layout_marginTop="10sp"
+        android:padding="10sp">
+
+        <ImageView
+            android:id="@+id/item_img"
+            android:layout_width="100sp"
+            android:layout_height="100sp"
+            android:src="@drawable/img_dangun"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:background="@drawable/list_img_border" />
+
+        <TextView
+            android:id="@+id/item_title"
+            android:layout_width="0sp"
+            android:layout_height="wrap_content"
+            android:text="실 험"
+            android:textSize="17sp"
+            android:textColor="@color/black"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/item_img"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginLeft="15sp" />
+
+        <TextView
+            android:id="@+id/item_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="당근마켓"
+            android:textSize="13sp"
+            android:textColor="@color/gray"
+            app:layout_constraintTop_toBottomOf="@id/item_title"
+            app:layout_constraintLeft_toRightOf="@id/item_img"
+            android:layout_marginLeft="15sp" />
+
+        <TextView
+            android:id="@+id/item_divider"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ㆍ"
+            android:textSize="13sp"
+            android:textColor="@color/gray"
+            app:layout_constraintTop_toBottomOf="@id/item_title"
+            app:layout_constraintLeft_toRightOf="@id/item_location" />
+
+        <TextView
+            android:id="@+id/item_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="15초 전"
+            android:textSize="13sp"
+            android:textColor="@color/gray"
+            app:layout_constraintTop_toBottomOf="@id/item_title"
+            app:layout_constraintLeft_toRightOf="@id/item_divider" />
+
+
+        <TextView
+            android:id="@+id/item_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="5,000원"
+            android:textSize="17sp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:layout_marginLeft="15sp"
+            app:layout_constraintTop_toBottomOf="@id/item_time"
+            app:layout_constraintLeft_toRightOf="@id/item_img" />
+
+
+        <TextView
+            android:id="@+id/txt_heart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="15"
+            android:textSize="14sp"
+            android:textColor="@color/dark_gray"
+            android:layout_marginTop="5sp"
+            app:layout_constraintTop_toBottomOf="@id/item_price"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+
+        <ImageView
+            android:id="@+id/img_heart"
+            android:layout_width="17sp"
+            android:layout_height="17sp"
+            android:background="@drawable/icon_heart"
+            android:layout_marginTop="5sp"
+            app:layout_constraintTop_toBottomOf="@id/item_price"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/txt_heart"
+            android:layout_marginRight="3sp"/>
+
+        <TextView
+            android:id="@+id/txt_chat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="10"
+            android:textSize="14sp"
+            android:textColor="@color/dark_gray"
+            android:layout_marginTop="5sp"
+            app:layout_constraintTop_toBottomOf="@id/item_price"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/img_heart"
+            android:layout_marginRight="5sp"/>
+
+        <ImageView
+            android:id="@+id/img_chat"
+            android:layout_width="17sp"
+            android:layout_height="17sp"
+            android:background="@drawable/icon_chatting"
+            android:layout_marginTop="5sp"
+            app:layout_constraintTop_toBottomOf="@id/item_price"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/txt_chat"
+            android:layout_marginRight="3sp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

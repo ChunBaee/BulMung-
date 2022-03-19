@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">RC_Standard_2</string>
+
+    <string name="unisee_title">유니씨뷰티</string>
+    <string name="unisee_content">안녕하하세요. #유니씨뷰티 를 찾아주신 방가운 고객님~</string>
+    <string name="unisee_review"><b>조선왕족실룩샐룩</b> 대구와서 첫 방문했는데 정말 친절하시구 네일을 꼼꼼히 해주시고 인테리어가 정말마음에 들었어요!</string>
+
+    <string name="yellow_title">노란간판휴대폰맛집</string>
+    <string name="yellow_content">우리동네 휴대폰성지입니다. 타매장과 비교하셔도 됩니다.</string>
+    <string name="yellow_review"><b>하르밀</b> Z플립3 싸게 구매했었는데 당근에서 또 보게되니 신기하네요</string>
+</resources>

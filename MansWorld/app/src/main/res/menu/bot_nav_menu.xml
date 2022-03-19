@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/listPage"
+        android:enabled="true"
+        android:icon="@drawable/listpage_icon"
+        android:title="게시판" />
+
+    <item
+        android:id="@+id/rankPage"
+        android:enabled="true"
+        android:icon="@drawable/ranklist_icon"
+        android:title="인기글" />
+
+    <item
+        android:id="@+id/userPage"
+        android:enabled="true"
+        android:icon="@drawable/userinfo_icon"
+        android:title="내정보" />
+
+</menu>

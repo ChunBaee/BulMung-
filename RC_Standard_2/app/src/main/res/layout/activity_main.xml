@@ -1,0 +1,681 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/Toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="내 근처"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TableLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:gravity="center_horizontal">
+
+            <TableRow>
+
+                <ImageButton
+                    android:layout_width="30sp"
+                    android:layout_height="30sp"
+                    android:layout_marginEnd="15sp"
+                    android:background="@drawable/icon_write" />
+
+                <ImageButton
+                    android:layout_width="30sp"
+                    android:layout_height="30sp"
+                    android:layout_marginEnd="15sp"
+                    android:background="@drawable/icon_scan" />
+
+                <ImageButton
+                    android:layout_width="30sp"
+                    android:layout_height="30sp"
+                    android:layout_marginEnd="15sp"
+                    android:background="@drawable/icon_alarm" />
+
+
+            </TableRow>
+
+        </TableLayout>
+
+    </com.google.android.material.appbar.MaterialToolbar>
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="0.7dp"
+        android:background="@color/chip_stroke"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/Toolbar" />
+
+    <LinearLayout
+        android:id="@+id/search_layout"
+        android:layout_width="0sp"
+        android:layout_height="0sp"
+        android:layout_marginLeft="15sp"
+        android:layout_marginTop="9sp"
+        android:layout_marginRight="15sp"
+        android:background="@drawable/search_background"
+        android:orientation="horizontal"
+        app:layout_constraintHeight_percent="0.06"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/divider"
+        app:layout_constraintWidth_percent="0.9">
+
+        <ImageView
+            android:layout_width="18sp"
+            android:layout_height="18sp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="10sp"
+            android:background="@drawable/icon_search_48" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="10sp"
+            android:text="복현2동 주변 가게를 찾아보세요"
+            android:textColor="@color/text_hint"
+            android:textSize="17sp" />
+
+
+    </LinearLayout>
+
+    <HorizontalScrollView
+        android:id="@+id/chip_layout"
+        android:layout_width="0sp"
+        android:layout_height="0sp"
+        android:layout_marginStart="13sp"
+        android:layout_marginTop="15sp"
+        android:overScrollMode="never"
+        android:scrollbars="none"
+        app:layout_constraintHeight_percent="0.055"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/search_layout"
+        app:layout_constraintWidth_percent="0.99">
+
+        <com.google.android.material.chip.ChipGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.chip.Chip
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="알바"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Chip.mChip"
+                android:textStyle="bold"
+                app:chipBackgroundColor="@color/white"
+                app:chipMinHeight="40sp"
+                app:chipStrokeColor="@color/chip_stroke"
+                app:chipStrokeWidth="1sp" />
+
+            <com.google.android.material.chip.Chip
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="쌀"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Chip.mChip"
+                android:textStyle="bold"
+                app:chipBackgroundColor="@color/white"
+                app:chipMinHeight="40sp"
+                app:chipStrokeColor="@color/chip_stroke"
+                app:chipStrokeWidth="1sp" />
+
+            <com.google.android.material.chip.Chip
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="자동차"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Chip.mChip"
+                android:textStyle="bold"
+                app:chipBackgroundColor="@color/white"
+                app:chipMinHeight="40sp"
+                app:chipStrokeColor="@color/chip_stroke"
+                app:chipStrokeWidth="1sp" />
+
+            <com.google.android.material.chip.Chip
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="김치"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Chip.mChip"
+                android:textStyle="bold"
+                app:chipBackgroundColor="@color/white"
+                app:chipMinHeight="40sp"
+                app:chipStrokeColor="@color/chip_stroke"
+                app:chipStrokeWidth="1sp" />
+
+            <com.google.android.material.chip.Chip
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="중고차"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Chip.mChip"
+                android:textStyle="bold"
+                app:chipBackgroundColor="@color/white"
+                app:chipMinHeight="40sp"
+                app:chipStrokeColor="@color/chip_stroke"
+                app:chipStrokeWidth="1sp" />
+
+            <com.google.android.material.chip.Chip
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="필라테스"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Chip.mChip"
+                android:textStyle="bold"
+                app:chipBackgroundColor="@color/white"
+                app:chipMinHeight="40sp"
+                app:chipStrokeColor="@color/chip_stroke"
+                app:chipStrokeWidth="1sp" />
+
+            <com.google.android.material.chip.Chip
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="붕어빵"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Chip.mChip"
+                android:textStyle="bold"
+                app:chipBackgroundColor="@color/white"
+                app:chipMinHeight="40sp"
+                app:chipStrokeColor="@color/chip_stroke"
+                app:chipStrokeWidth="1sp" />
+
+            <com.google.android.material.chip.Chip
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="네일"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Chip.mChip"
+                android:textStyle="bold"
+                app:chipBackgroundColor="@color/white"
+                app:chipMinHeight="40sp"
+                app:chipStrokeColor="@color/chip_stroke"
+                app:chipStrokeWidth="1sp" />
+
+            <com.google.android.material.chip.Chip
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="당근알바"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Chip.mChip"
+                android:textStyle="bold"
+                app:chipBackgroundColor="@color/white"
+                app:chipMinHeight="40sp"
+                app:chipStrokeColor="@color/chip_stroke"
+                app:chipStrokeWidth="1sp" />
+
+            <com.google.android.material.chip.Chip
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="심부름"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Chip.mChip"
+                android:textStyle="bold"
+                app:chipBackgroundColor="@color/white"
+                app:chipMinHeight="40sp"
+                app:chipStrokeColor="@color/chip_stroke"
+                app:chipStrokeWidth="1sp" />
+
+        </com.google.android.material.chip.ChipGroup>
+
+    </HorizontalScrollView>
+
+    <View
+        android:id="@+id/divider2"
+        android:layout_width="match_parent"
+        android:layout_height="0.7dp"
+        android:layout_marginHorizontal="13sp"
+        android:layout_marginTop="5sp"
+        android:background="@color/chip_stroke"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/chip_layout" />
+
+    <GridLayout
+        android:id="@+id/gridView"
+        android:layout_width="0sp"
+        android:layout_height="0sp"
+        android:layout_margin="20sp"
+        android:columnCount="4"
+        android:orientation="vertical"
+        android:rowCount="4"
+        app:layout_constraintBottom_toTopOf="@id/divider3"
+        app:layout_constraintHeight_percent="0.2"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/divider2"
+        app:layout_constraintWidth_percent="0.9">
+
+        <ImageView
+            android:layout_width="45sp"
+            android:layout_height="35sp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="center"
+            android:background="@drawable/icon_coupon" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="20sp"
+            android:text="쿠폰북"
+            android:textColor="@color/black" />
+
+        <ImageView
+            android:layout_width="50sp"
+            android:layout_height="45sp"
+            android:layout_gravity="center"
+            android:background="@drawable/icon_car" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="중고차"
+            android:textColor="@color/black" />
+
+        <ImageView
+            android:layout_width="50sp"
+            android:layout_height="40sp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="center"
+            android:background="@drawable/icon_alba" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="20sp"
+            android:text="알바"
+            android:textColor="@color/black" />
+
+        <ImageView
+            android:layout_width="55sp"
+            android:layout_height="45sp"
+            android:layout_gravity="center"
+            android:background="@drawable/icon_class" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="과외/클래스"
+            android:textColor="@color/black" />
+
+        <ImageView
+            android:layout_width="55sp"
+            android:layout_height="45sp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="center"
+            android:background="@drawable/icon_land" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="20sp"
+            android:text="부동산 직거래"
+            android:textColor="@color/black" />
+
+        <ImageView
+            android:layout_width="55sp"
+            android:layout_height="45sp"
+            android:layout_gravity="center"
+            android:background="@drawable/icon_service" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="생활서비스"
+            android:textColor="@color/black" />
+
+        <ImageView
+            android:layout_width="50sp"
+            android:layout_height="40sp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="center"
+            android:background="@drawable/icon_food" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="20sp"
+            android:text="농수산물"
+            android:textColor="@color/black" />
+
+        <ImageView
+            android:layout_width="55sp"
+            android:layout_height="45sp"
+            android:layout_gravity="center"
+            android:background="@drawable/icon_jiwon" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="국민지원금"
+            android:textColor="@color/black" />
+
+    </GridLayout>
+
+    <View
+        android:id="@+id/divider3"
+        android:layout_width="match_parent"
+        android:layout_height="7sp"
+        android:layout_marginTop="20sp"
+        android:background="@color/search_background"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/gridView" />
+
+    <TextView
+        android:id="@+id/txt_recommend_shop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="13sp"
+        android:layout_marginTop="25sp"
+        android:text="이웃들의 추천 가게"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divider3" />
+
+    <HorizontalScrollView
+        android:layout_width="0sp"
+        android:layout_height="0sp"
+        android:layout_marginTop="20sp"
+        android:overScrollMode="never"
+        android:scrollbars="none"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.35"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txt_recommend_shop"
+        app:layout_constraintWidth_percent="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:background="#0D808080">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="280sp"
+                    android:layout_height="260sp"
+                    android:layout_marginLeft="13sp"
+                    app:cardCornerRadius="10sp" >
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:id="@+id/img_unisee_1"
+                            android:layout_width="139sp"
+                            android:layout_height="95sp"
+                            android:background="@drawable/img_unisee_1"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <ImageView
+                            android:id="@+id/img_unisee_2"
+                            android:layout_width="139sp"
+                            android:layout_height="95sp"
+                            android:background="@drawable/img_unisee_2"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/card_layout2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="0dp"
+                            android:padding="10sp"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/img_unisee_1">
+
+                            <TextView
+                                android:id="@+id/txt_unisee_title"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/unisee_title"
+                                android:textColor="@color/black"
+                                android:textSize="17sp"
+                                android:textStyle="bold"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:id="@+id/txt_unisee_content"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="3sp"
+                                android:ellipsize="end"
+                                android:maxLines="1"
+                                android:text="@string/unisee_content"
+                                android:textColor="@color/black"
+                                android:textSize="15sp"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintTop_toBottomOf="@id/txt_unisee_title" />
+
+                            <TextView
+                                android:id="@+id/txt_unisee_review"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="4sp"
+                                android:text="후기 8"
+                                android:textColor="@color/orange"
+                                android:textSize="12sp"
+                                android:textStyle="bold"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintRight_toLeftOf="@id/txt_unisee_divider"
+                                app:layout_constraintTop_toBottomOf="@id/txt_unisee_content" />
+
+                            <View
+                                android:id="@+id/txt_unisee_divider"
+                                android:layout_width="2sp"
+                                android:layout_height="2sp"
+                                android:layout_marginLeft="4sp"
+                                android:layout_marginTop="12sp"
+                                android:background="@color/dot_divider"
+                                app:layout_constraintLeft_toRightOf="@id/txt_unisee_review"
+                                app:layout_constraintRight_toLeftOf="@id/txt_unisee_customer"
+                                app:layout_constraintTop_toBottomOf="@id/txt_unisee_content" />
+
+                            <TextView
+                                android:id="@+id/txt_unisee_customer"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="4sp"
+                                android:layout_marginTop="4sp"
+                                android:text="단골 25"
+                                android:textSize="12sp"
+                                app:layout_constraintLeft_toRightOf="@id/txt_unisee_divider"
+                                app:layout_constraintTop_toBottomOf="@id/txt_unisee_content" />
+
+                            <com.google.android.material.card.MaterialCardView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_marginTop="15sp"
+                                app:cardBackgroundColor="@color/search_background"
+                                app:cardElevation="0sp"
+                                app:contentPadding="10sp"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintRight_toRightOf="parent"
+                                app:layout_constraintTop_toBottomOf="@id/txt_unisee_review">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:ellipsize="end"
+                                    android:lineHeight="20sp"
+                                    android:maxLines="2"
+                                    android:text="@string/unisee_review"
+                                    android:textColor="@color/black"
+                                    android:textSize="15sp" />
+
+
+                            </com.google.android.material.card.MaterialCardView>
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="280sp"
+                android:layout_height="260sp"
+                android:layout_marginLeft="15sp"
+                android:layout_marginRight="15sp"
+                app:cardCornerRadius="10sp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/img_yellow_1"
+                        android:layout_width="139sp"
+                        android:layout_height="95sp"
+                        android:background="@drawable/img_yellow_1"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:layout_width="139sp"
+                        android:layout_height="95sp"
+                        android:background="@drawable/img_yellow_2"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/card2_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:padding="10sp"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/img_yellow_1">
+
+                        <TextView
+                            android:id="@+id/txt_yellow_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/yellow_title"
+                            android:textColor="@color/black"
+                            android:textSize="17sp"
+                            android:textStyle="bold"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/txt_yellow_content"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="3sp"
+                            android:ellipsize="end"
+                            android:maxLines="1"
+                            android:text="@string/yellow_content"
+                            android:textColor="@color/black"
+                            android:textSize="15sp"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/txt_yellow_title" />
+
+                        <TextView
+                            android:id="@+id/txt_yellow_review"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4sp"
+                            android:text="후기 1"
+                            android:textColor="@color/orange"
+                            android:textSize="12sp"
+                            android:textStyle="bold"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toLeftOf="@id/txt_yellow_divider"
+                            app:layout_constraintTop_toBottomOf="@id/txt_yellow_content" />
+
+                        <View
+                            android:id="@+id/txt_yellow_divider"
+                            android:layout_width="2sp"
+                            android:layout_height="2sp"
+                            android:layout_marginLeft="4sp"
+                            android:layout_marginTop="12sp"
+                            android:background="@color/dot_divider"
+                            app:layout_constraintLeft_toRightOf="@id/txt_yellow_review"
+                            app:layout_constraintRight_toLeftOf="@id/txt_yellow_customer"
+                            app:layout_constraintTop_toBottomOf="@id/txt_yellow_content" />
+
+                        <TextView
+                            android:id="@+id/txt_yellow_customer"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="4sp"
+                            android:layout_marginTop="4sp"
+                            android:text="단골 5"
+                            android:textSize="12sp"
+                            app:layout_constraintLeft_toRightOf="@id/txt_yellow_divider"
+                            app:layout_constraintTop_toBottomOf="@id/txt_yellow_content" />
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_marginTop="15sp"
+                            app:cardBackgroundColor="@color/search_background"
+                            app:cardElevation="0sp"
+                            app:contentPadding="10sp"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/txt_yellow_review">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:ellipsize="end"
+                                android:lineHeight="20sp"
+                                android:maxLines="2"
+                                android:text="@string/yellow_review"
+                                android:textColor="@color/black"
+                                android:textSize="15sp" />
+
+
+                        </com.google.android.material.card.MaterialCardView>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+
+    </HorizontalScrollView>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavBar"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        app:itemIconTint="@color/black"
+        app:itemTextColor="@color/black"
+        app:labelVisibilityMode="labeled"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:menu="@menu/bottom_menu">
+
+
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

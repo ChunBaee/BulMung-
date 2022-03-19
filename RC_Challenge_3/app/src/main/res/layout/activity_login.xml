@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/login_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginTop="15sp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="한국어 (대한민국)"
+                android:textColor="@color/gray_70"/>
+
+            <ImageView
+                android:layout_width="10sp"
+                android:layout_height="10sp"
+                android:background="@drawable/icon_down_arrow"
+                android:layout_margin="5sp" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/logo_insta"
+            android:layout_width="0sp"
+            android:layout_height="0sp"
+            android:background="@drawable/img_insta_logo"
+            app:layout_constraintWidth_percent="0.4"
+            app:layout_constraintHeight_percent="0.065"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintVertical_bias="0.37" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card_facebook_login"
+            android:layout_width="0sp"
+            android:layout_height="0sp"
+            app:cardCornerRadius="5sp"
+            android:clickable="true"
+            app:layout_constraintVertical_bias="0.38"
+            app:layout_constraintHeight_percent="0.058"
+            app:layout_constraintWidth_percent="0.9"
+            app:layout_constraintTop_toBottomOf="@id/logo_insta"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent" >
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/border_facebook_button">
+
+                <ImageView
+                    android:layout_width="16sp"
+                    android:layout_height="16sp"
+                    android:background="@drawable/icon_facebook"
+                    android:layout_marginRight="5sp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toLeftOf="@id/txt_facebook_login"/>
+
+                <TextView
+                    android:id="@+id/txt_facebook_login"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="춘배님으로 계속"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <TextView
+            android:id="@+id/txt_friend"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="컴공선배님, 록키님 외 친구 999명이 Instagram을 사용 중입니다."
+            android:textColor="@color/gray_70"
+            android:layout_marginTop="10sp"
+            app:layout_constraintTop_toBottomOf="@id/card_facebook_login"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent" />
+
+        <View
+            android:id="@+id/and_border"
+            android:layout_width="0sp"
+            android:layout_height="0.8sp"
+            android:background="@color/gray_70"
+            app:layout_constraintTop_toBottomOf="@id/txt_friend"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintWidth_percent="0.9"
+            app:layout_constraintVertical_bias="0.15" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="40sp"
+            android:layout_height="wrap_content"
+            android:text="또는"
+            android:textColor="@color/gray_70"
+            android:background="@color/white"
+            android:clickable="false"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            app:layout_constraintTop_toBottomOf="@id/txt_friend"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintVertical_bias="0.05" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="이메일 주소 또는 전화번호로 가입하기"
+            android:textColor="@color/facebook_color"
+            android:textStyle="bold"
+            android:clickable="true"
+            app:layout_constraintTop_toBottomOf="@id/and_border"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintVertical_bias="0.12" />
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="0sp"
+            app:layout_constraintHeight_percent="0.055"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent" >
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5sp"
+                android:background="@color/gray_50"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent" />
+
+            <TextView
+                android:id="@+id/txt_haveAccount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="이미 계정이 있으신가요?"
+                android:textSize="13sp"
+                android:textColor="@color/gray_70"
+                app:layout_constraintHorizontal_bias="0.40"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="로그인하기"
+                android:textColor="@color/login_txt_color"
+                android:textStyle="bold"
+                android:textSize="13sp"
+                android:layout_marginLeft="3sp"
+                android:clickable="true"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/txt_haveAccount" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

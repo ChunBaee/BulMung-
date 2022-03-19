@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/default_background_color">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/default_background_color">
+
+            <com.google.android.material.appbar.CollapsingToolbarLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:contentScrim="@color/default_background_color"
+                app:layout_scrollFlags="scroll|enterAlways">
+
+                <ImageView
+                    android:id="@+id/btn_toolbar_logo"
+                    android:layout_width="35sp"
+                    android:layout_height="35sp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="15sp"
+                    android:src="@drawable/icon_melon"
+                    app:layout_collapseMode="parallax" />
+
+                <ImageView
+                    android:id="@+id/btn_toolbar_menu"
+                    android:layout_width="30sp"
+                    android:layout_height="30sp"
+                    android:layout_gravity="end|center_vertical"
+                    android:layout_marginEnd="20sp"
+                    android:src="@drawable/icon_menu"
+                    app:layout_collapseMode="parallax" />
+
+                <ImageView
+                    android:layout_width="45sp"
+                    android:layout_height="30sp"
+                    android:layout_gravity="end|center_vertical"
+                    android:layout_marginEnd="75sp"
+                    android:src="@drawable/icon_ticket"
+                    app:layout_collapseMode="parallax" />
+
+            </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fillViewport="true">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/default_background_color"
+                android:layout_marginTop="35sp"
+                android:padding="15sp"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+                <TextView
+                    android:id="@+id/first_title_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="춘배님이 좋아할 음악"
+                    android:textColor="@color/white"
+                    android:textSize="30sp"
+                    android:textStyle="bold"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/MainRV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10sp"
+                    android:orientation="horizontal"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/first_title_txt"
+                    tools:listitem="@layout/item_main" />
+
+                <TextView
+                    android:id="@+id/txt_event"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="[이벤트] 제 11회 가온차트 티켓 드려요!"
+                    android:textColor="@color/gray"
+                    app:layout_constraintTop_toBottomOf="@id/MainRV"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    android:layout_marginTop="30sp"
+                    android:layout_marginLeft="10sp" />
+
+                <ImageView
+                    android:id="@+id/img_event"
+                    android:layout_width="0sp"
+                    android:layout_height="0sp"
+                    android:background="@drawable/img_advertise"
+                    app:layout_constraintWidth_percent="0.95"
+                    app:layout_constraintHeight_percent="0.1"
+                    android:layout_marginTop="10sp"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/txt_event" />
+
+                <TextView
+                    android:id="@+id/second_title_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="아이돌 명곡 총 정리"
+                    android:textSize="25sp"
+                    android:textColor="@color/white"
+                    android:layout_marginLeft="10sp"
+                    android:layout_marginTop="20sp"
+                    app:layout_constraintTop_toBottomOf="@id/img_event"
+                    app:layout_constraintLeft_toLeftOf="parent" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="전체보기"
+                    android:textColor="@color/gray"
+                    android:layout_marginRight="10sp"
+                    app:layout_constraintTop_toTopOf="@id/second_title_txt"
+                    app:layout_constraintBottom_toBottomOf="@id/second_title_txt"
+                    app:layout_constraintRight_toRightOf="parent" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/second_RV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10sp"
+                    android:orientation="horizontal"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    app:layout_constraintTop_toBottomOf="@id/second_title_txt"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    tools:listitem="@layout/item_second"/>
+
+
+                <TextView
+                    android:id="@+id/third_title_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="오디플 (오늘의 DJ PL)"
+                    android:textSize="25sp"
+                    android:textColor="@color/white"
+                    android:layout_marginLeft="10sp"
+                    android:layout_marginTop="20sp"
+                    app:layout_constraintTop_toBottomOf="@id/second_RV"
+                    app:layout_constraintLeft_toLeftOf="parent" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="전체보기"
+                    android:textColor="@color/gray"
+                    android:layout_marginRight="10sp"
+                    app:layout_constraintTop_toTopOf="@id/third_title_txt"
+                    app:layout_constraintBottom_toBottomOf="@id/third_title_txt"
+                    app:layout_constraintRight_toRightOf="parent" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/third_RV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10sp"
+                    android:orientation="horizontal"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    app:layout_constraintTop_toBottomOf="@id/third_title_txt"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    tools:listitem="@layout/item_second"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="80sp"
+                    app:layout_constraintTop_toBottomOf="@id/third_RV"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</layout>

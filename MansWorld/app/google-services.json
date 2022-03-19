@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "143378051447",
+    "project_id": "mansworld-e352b",
+    "storage_bucket": "mansworld-e352b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:143378051447:android:58636d3a69197446dcf172",
+        "android_client_info": {
+          "package_name": "com.solie.mansworld"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "143378051447-huda9uj24kto5jf2kufg3lddv6cg7qga.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.solie.mansworld",
+            "certificate_hash": "41342a194d7b2e339be97fc1ae8c1d68db4f826c"
+          }
+        },
+        {
+          "client_id": "143378051447-6v8qpo2jc44qoqn52t7oae409v41j7aj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDtVHsa18O7KDZT9R52yvw2cdFDmJLqdh8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "143378051447-6v8qpo2jc44qoqn52t7oae409v41j7aj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

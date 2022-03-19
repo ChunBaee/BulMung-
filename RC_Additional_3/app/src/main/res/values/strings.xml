@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">RC_Additional_3</string>
+    
+    <string name="naver_client_id">_1xbjLKQLRuPX_qWDe4J</string>
+    <string name="naver_client_secret">9IEUJpQfed</string>
+
+    <string name="kakao_native_key">70d3547a8ae8a69945abf92f05cbb22f</string>
+
+    <string name="cafe_title">춘배의 코딩</string>
+</resources>

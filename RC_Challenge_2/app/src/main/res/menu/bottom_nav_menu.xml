@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/menu_jasan"
+        android:icon="@drawable/icon_jasan"
+        android:title="자산"
+        app:showAsAction="withText" />
+
+    <item
+        android:id="@+id/menu_kumyoong"
+        android:icon="@drawable/icon_kumyoung"
+        android:title="금융팁"
+        app:showAsAction="withText" />
+
+    <item
+        android:title=""
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/menu_hyeteck"
+        android:icon="@drawable/icon_hyeteck"
+        android:title="혜택"
+        app:showAsAction="withText" />
+
+    <item
+        android:id="@+id/menu_tooja"
+        android:icon="@drawable/icon_tooja"
+        android:title="투자"
+        app:showAsAction="withText" />
+
+</menu>

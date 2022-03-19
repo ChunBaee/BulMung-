@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/default_background_color"
+        android:layout_marginRight="15sp">
+
+        <TextView
+            android:id="@+id/item_main_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="이번 주 인기 플레이리스트"
+            android:textSize="15sp"
+            android:textColor="@color/bottom_icon_selected"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"/>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="230sp"
+            android:layout_height="220sp"
+            app:cardCornerRadius="10sp"
+            android:layout_marginTop="10sp"
+            app:cardBackgroundColor="@color/main_RV_card_color"
+            app:layout_constraintTop_toBottomOf="@id/item_main_title"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent" >
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <ImageView
+                    android:layout_width="25sp"
+                    android:layout_height="25sp"
+                    android:src="@drawable/icon_play"
+                    android:layout_margin="10sp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintRight_toRightOf="parent" />
+
+                <ImageView
+                    android:id="@+id/item_main_album_img"
+                    android:layout_width="130sp"
+                    android:layout_height="130sp"
+                    android:src="@drawable/img_back_exam"
+                    android:background="@drawable/round_border"
+                    app:layout_constraintVertical_bias="0.26"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent" />
+
+                <TextView
+                    android:id="@+id/item_main_album_main_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="삶에 지친 나에게 전하는 따스한 음악"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:paddingHorizontal="20sp"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/item_main_album_img"
+                    app:layout_constraintBottom_toTopOf="@id/item_main_album_sub_txt"/>
+
+                <TextView
+                    android:id="@+id/item_main_album_sub_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="#위로 #생각"
+                    android:textColor="@color/gray"
+                    android:textSize="13sp"
+                    app:layout_constraintTop_toBottomOf="@id/item_main_album_main_txt"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

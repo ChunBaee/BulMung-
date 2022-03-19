@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "379004844896",
+    "firebase_url": "https://example-7ee51-default-rtdb.firebaseio.com",
+    "project_id": "example-7ee51",
+    "storage_bucket": "example-7ee51.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:379004844896:android:a9c51d92c8eadac23f7c05",
+        "android_client_info": {
+          "package_name": "com.solie.firebaseexam"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "379004844896-24kn4aspffstlk8e00mm6u7mfkikdov1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCZiPi-JuvFEDi9EPezzUZ_8aXZozPMJ-c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "379004844896-24kn4aspffstlk8e00mm6u7mfkikdov1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

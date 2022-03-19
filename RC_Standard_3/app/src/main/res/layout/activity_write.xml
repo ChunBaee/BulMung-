@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/write_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/write_Toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="중고거래 글쓰기"
+                    android:textSize="20sp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent" />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/noColor"
+                    android:text="완료"
+                    android:textColor="@color/dangun_sig"
+                    android:textSize="18sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </com.google.android.material.appbar.MaterialToolbar>
+
+        <View
+            android:id="@+id/toolbar_divider"
+            android:layout_width="match_parent"
+            android:layout_height="1sp"
+            android:background="@color/light_gray"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/write_Toolbar" />
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0sp"
+            android:layout_marginHorizontal="15sp"
+            app:layout_constraintTop_toBottomOf="@id/toolbar_divider"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <HorizontalScrollView
+                    android:id="@+id/img_scrollView"
+                    android:layout_width="0sp"
+                    android:layout_height="100sp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintWidth_percent="1">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <ImageButton
+                            android:layout_width="65sp"
+                            android:layout_height="65sp"
+                            android:layout_marginTop="15sp"
+                            android:layout_marginBottom="15sp"
+                            android:background="@drawable/img_inputimg" />
+
+                    </LinearLayout>
+                </HorizontalScrollView>
+
+                <View
+                    android:id="@+id/photo_divider"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.7sp"
+                    android:background="@color/light_gray"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/img_scrollView" />
+
+
+                <EditText
+                    android:id="@+id/edt_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="0sp"
+                    android:hint="글 제목"
+                    android:textSize="17sp"
+                    android:gravity="center_vertical"
+                    android:textColorHint="@color/light_gray"
+                    android:background="@color/noColor"
+                    app:layout_constraintHeight_percent="0.1"
+                    app:layout_constraintTop_toBottomOf="@id/photo_divider"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent" />
+
+                <View
+                    android:id="@+id/title_divider"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.7sp"
+                    android:background="@color/light_gray"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/edt_title" />
+
+                <TextView
+                    android:id="@+id/txt_category"
+                    android:layout_width="match_parent"
+                    android:layout_height="0sp"
+                    android:text="카테고리"
+                    android:textColor="@color/black"
+                    android:textSize="17sp"
+                    android:gravity="center_vertical"
+                    app:layout_constraintHeight_percent="0.1"
+                    app:layout_constraintTop_toBottomOf="@id/title_divider"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent" />
+
+                <ImageView
+                    android:layout_width="15sp"
+                    android:layout_height="15sp"
+                    android:background="@drawable/icon_down_arrow"
+                    android:gravity="center_vertical"
+                    android:layout_marginRight="10sp"
+                    app:layout_constraintTop_toBottomOf="@id/title_divider"
+                    app:layout_constraintBottom_toTopOf="@id/category_divider"
+                    app:layout_constraintRight_toRightOf="parent" />
+
+                <View
+                    android:id="@+id/category_divider"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.7sp"
+                    android:background="@color/light_gray"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/txt_category" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/layout_won"
+                    android:layout_width="match_parent"
+                    android:layout_height="0sp"
+                    app:layout_constraintHeight_percent="0.1"
+                    app:layout_constraintTop_toBottomOf="@id/category_divider"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent" >
+
+                    <TextView
+                        android:id="@+id/txt_won"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="₩"
+                        android:textSize="17sp"
+                        android:textColor="@color/light_gray"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent" />
+
+                    <EditText
+                        android:id="@+id/edt_won"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:hint="가격 (선택사항)"
+                        android:inputType="number"
+                        android:textColorHint="@color/light_gray"
+                        android:textSize="17sp"
+                        android:background="@color/noColor"
+                        android:layout_marginLeft="5sp"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toRightOf="@id/txt_won" />
+
+                    <com.google.android.material.checkbox.MaterialCheckBox
+                        android:id="@+id/cbx_won"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="가격 제안받기"
+                        android:textSize="14sp"
+                        android:textColor="@color/light_gray"
+                        android:button="@drawable/write_checkbox_custom"
+                        android:buttonTint="@color/light_gray"
+                        android:clickable="false"
+                        android:paddingLeft="7sp"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintRight_toRightOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <View
+                    android:id="@+id/won_divider"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.7sp"
+                    android:background="@color/light_gray"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/layout_won" />
+
+                <EditText
+                    android:id="@+id/edt_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="300sp"
+                    android:hint="산격3동에 올릴 게시글 내용을 작성해주세요.(가품 및 판매금지품목은 게시가 제한될 수 있어요.)"
+                    android:textSize="17sp"
+                    android:textColorHint="@color/light_gray"
+                    android:gravity="start"
+                    android:paddingTop="15sp"
+                    android:background="@color/noColor"
+                    app:layout_constraintTop_toBottomOf="@id/won_divider"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:orientation="vertical"
+            android:layout_weight="1" >
+
+            <View
+                android:id="@+id/bottom_divider"
+                android:layout_width="match_parent"
+                android:layout_height="0.7sp"
+                android:background="@color/light_gray" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="10sp">
+
+            <ImageView
+                android:layout_width="17sp"
+                android:layout_height="17sp"
+                android:background="@drawable/icon_jaju"
+                android:layout_gravity="center_vertical" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="자주 쓰는 문구"
+                android:textSize="12sp"
+                android:textColor="@color/black"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="7sp"/>
+
+            <ImageView
+                android:layout_width="17sp"
+                android:layout_height="17sp"
+                android:background="@drawable/icon_dongnae"
+                android:layout_marginLeft="15sp"
+                android:layout_gravity="center_vertical" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="보여줄 동네 설정"
+                android:textSize="12sp"
+                android:textColor="@color/black"
+                android:layout_marginLeft="7sp"
+                android:layout_gravity="center_vertical" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

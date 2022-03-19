@@ -1,0 +1,809 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/kkt_peach_background"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/btn_view"
+        android:layout_width="0sp"
+        android:layout_height="0sp"
+        android:text="뷰"
+        android:textSize="20sp"
+        app:layout_constraintWidth_percent="0.07"
+        app:layout_constraintHeight_percent="0.06"
+        android:layout_marginLeft="10sp"
+        android:layout_marginTop="5sp"
+        android:background="@color/no_color"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+    <Button
+        android:layout_width="0sp"
+        android:layout_height="0sp"
+        android:text="My뷰"
+        android:textSize="20sp"
+        android:background="@color/no_color"
+        android:textColor="@color/tab_unselected_txt"
+        android:layout_marginTop="5sp"
+        android:layout_marginLeft="10sp"
+        app:layout_constraintWidth_percent="0.13"
+        app:layout_constraintHeight_percent="0.06"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/btn_view" />
+
+    <TableLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="20sp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TableRow>
+
+            <ImageButton
+                android:id="@+id/btn_search"
+                android:layout_width="20sp"
+                android:layout_height="20sp"
+                android:layout_marginLeft="10sp"
+                android:layout_marginRight="10sp"
+                android:background="@drawable/icon_search" />
+
+            <ImageButton
+                android:id="@+id/btn_music"
+                android:layout_width="20sp"
+                android:layout_height="20sp"
+                android:layout_marginLeft="5sp"
+                android:layout_marginRight="10sp"
+                android:background="@drawable/icon_music" />
+
+
+            <ImageButton
+                android:id="@+id/btn_setting"
+                android:layout_width="20sp"
+                android:layout_height="20sp"
+                android:layout_marginLeft="5sp"
+                android:layout_marginRight="10sp"
+                android:background="@drawable/icon_settting"
+                />
+
+        </TableRow>
+
+    </TableLayout>
+
+    <FrameLayout
+        android:id="@+id/main_Container"
+        android:layout_width="0sp"
+        android:layout_height="wrap_content"
+        android:background="@color/kkt_peach_background"
+        android:orientation="vertical"
+        app:layout_constraintWidth_percent="1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_view">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/sub_tab_layout"
+                android:layout_width="0sp"
+                android:layout_height="0sp"
+                android:background="@color/kkt_peach_background"
+                app:layout_constraintWidth_percent="1"
+                app:layout_constraintHeight_percent="0.06"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tabGravity="start"
+                app:tabIndicatorColor="@color/tab_selected_txt"
+                app:tabIndicatorHeight="2sp"
+                app:tabMode="scrollable"
+                app:tabSelectedTextColor="@color/tab_selected_txt"
+                app:tabTextColor="@color/tab_unselected_txt">
+
+                <com.google.android.material.tabs.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/mainTab_1st" />
+
+                <com.google.android.material.tabs.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/mainTab_2nd" />
+
+                <com.google.android.material.tabs.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/mainTab_3rd" />
+
+                <com.google.android.material.tabs.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/mainTab_4th" />
+
+                <com.google.android.material.tabs.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/mainTab_5th" />
+
+            </com.google.android.material.tabs.TabLayout>
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/sub_tab_layout">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:id="@+id/banner_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="60sp"
+                            android:background="@drawable/img_starbucks_banner" />
+
+                    </RelativeLayout>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/card_money_grab"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="15sp"
+                        app:cardCornerRadius="10sp">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/kkt_peach_fragment_background"
+                            android:padding="15dp">
+
+                            <ImageView
+                                android:id="@+id/img_moneygrab"
+                                android:layout_width="20sp"
+                                android:layout_height="20sp"
+                                android:layout_marginTop="20sp"
+                                android:src="@drawable/icon_moneygrab"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5sp"
+                                android:layout_marginTop="21sp"
+                                android:text="@string/Card_moneyGrab"
+                                android:textSize="15sp"
+                                android:textStyle="bold"
+                                app:layout_constraintLeft_toRightOf="@id/img_moneygrab"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <ImageButton
+                                android:layout_width="35sp"
+                                android:layout_height="25sp"
+                                android:layout_marginTop="18sp"
+                                android:layout_marginRight="5sp"
+                                android:background="@drawable/icon_kkt_channel"
+                                app:layout_constraintRight_toLeftOf="@id/money_menu"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <ImageButton
+                                android:id="@+id/money_menu"
+                                android:layout_width="20sp"
+                                android:layout_height="20sp"
+                                android:layout_marginTop="20sp"
+                                android:background="@drawable/icon_menu"
+                                app:layout_constraintRight_toRightOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:id="@+id/txt_money_article"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10sp"
+                                android:text="@string/moneyGrab_title"
+                                android:textSize="20sp"
+                                android:textStyle="bold"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintTop_toBottomOf="@id/img_moneygrab" />
+
+                            <TextView
+                                android:id="@+id/txt_money_time"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="2sp"
+                                android:text="@string/moneyGrab_time"
+                                android:textColor="@color/tab_unselected_txt"
+                                android:textSize="12sp"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintTop_toBottomOf="@id/txt_money_article" />
+
+
+                            <TextView
+                                android:id="@+id/txt_money_content"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="13sp"
+                                android:text="@string/moneyGrab_content"
+                                android:textSize="15sp"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintRight_toRightOf="parent"
+                                app:layout_constraintTop_toBottomOf="@id/txt_money_time" />
+
+                            <View
+                                android:id="@+id/money_1st_divider"
+                                android:layout_width="match_parent"
+                                android:layout_height="0.7sp"
+                                android:layout_margin="10sp"
+                                android:background="@color/tab_unselected_txt"
+                                app:layout_constraintBottom_toTopOf="@id/img_sinseon"
+                                app:layout_constraintTop_toBottomOf="@id/txt_money_content" />
+
+                            <ImageView
+                                android:id="@+id/img_sinseon"
+                                android:layout_width="100sp"
+                                android:layout_height="70sp"
+                                android:layout_marginTop="10sp"
+                                android:background="@drawable/img_sinseon"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintTop_toBottomOf="@id/money_1st_divider" />
+
+                            <TextView
+                                android:id="@+id/txt_sinseon"
+                                android:layout_width="0sp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10sp"
+                                android:layout_marginTop="13sp"
+                                android:text="@string/sinseon_title"
+                                android:textSize="15sp"
+                                app:layout_constraintLeft_toRightOf="@id/img_sinseon"
+                                app:layout_constraintRight_toRightOf="parent"
+                                app:layout_constraintTop_toBottomOf="@id/money_1st_divider" />
+
+                            <ImageView
+                                android:id="@+id/img_mbc_logo"
+                                android:layout_width="20sp"
+                                android:layout_height="20sp"
+                                android:layout_marginLeft="9sp"
+                                android:layout_marginTop="7sp"
+                                android:background="@drawable/icon_mbc"
+                                app:layout_constraintLeft_toRightOf="@id/img_sinseon"
+                                app:layout_constraintTop_toBottomOf="@id/txt_sinseon" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="3sp"
+                                android:layout_marginTop="6sp"
+                                android:text="@string/MBC"
+                                android:textColor="@color/tab_unselected_txt"
+                                android:textSize="13sp"
+                                app:layout_constraintLeft_toRightOf="@id/img_mbc_logo"
+                                app:layout_constraintTop_toBottomOf="@id/txt_sinseon" />
+
+                            <ImageView
+                                android:id="@+id/img_qna"
+                                android:layout_width="100sp"
+                                android:layout_height="70sp"
+                                android:layout_marginTop="15sp"
+                                android:background="@drawable/img_qna"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintTop_toBottomOf="@id/img_sinseon" />
+
+                            <TextView
+                                android:id="@+id/txt_qna"
+                                android:layout_width="0sp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10sp"
+                                android:layout_marginTop="17sp"
+                                android:text="@string/qna_title"
+                                android:textSize="15sp"
+                                app:layout_constraintLeft_toRightOf="@id/img_qna"
+                                app:layout_constraintRight_toRightOf="parent"
+                                app:layout_constraintTop_toBottomOf="@id/img_mbc_logo" />
+
+                            <ImageView
+                                android:id="@+id/img_seoulc_logo"
+                                android:layout_width="20sp"
+                                android:layout_height="20sp"
+                                android:layout_marginLeft="8.5sp"
+                                android:layout_marginTop="5.5sp"
+                                android:background="@drawable/icon_seoulc_logo"
+                                app:layout_constraintLeft_toRightOf="@id/img_qna"
+                                app:layout_constraintTop_toBottomOf="@id/txt_qna" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="2.5sp"
+                                android:layout_marginTop="5.5sp"
+                                android:text="@string/SeoulC"
+                                android:textColor="@color/tab_unselected_txt"
+                                android:textSize="13sp"
+                                app:layout_constraintLeft_toRightOf="@id/img_seoulc_logo"
+                                app:layout_constraintTop_toBottomOf="@id/txt_qna" />
+
+                            <TextView
+                                android:id="@+id/txt_see_more"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="15sp"
+                                android:gravity="center"
+                                android:text="@string/see_more"
+                                android:textColor="@color/tab_unselected_txt"
+                                android:textSize="11sp"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintRight_toRightOf="parent"
+                                app:layout_constraintTop_toBottomOf="@id/img_seoulc_logo" />
+
+                            <View
+                                android:id="@+id/view_2nd_divider"
+                                android:layout_width="match_parent"
+                                android:layout_height="0.7sp"
+                                android:layout_marginTop="20sp"
+                                android:layout_marginHorizontal="10sp"
+                                android:background="@color/tab_unselected_txt"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintRight_toRightOf="parent"
+                                app:layout_constraintTop_toBottomOf="@id/txt_see_more" />
+
+                            <ImageView
+                                android:id="@+id/icon_share"
+                                android:layout_width="25sp"
+                                android:layout_height="25sp"
+                                android:layout_marginTop="10sp"
+                                android:layout_marginRight="50sp"
+                                android:background="@drawable/icon_share"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintRight_toLeftOf="@id/view_3rd_divider"
+                                app:layout_constraintTop_toBottomOf="@id/view_2nd_divider" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="3sp"
+                                android:layout_marginTop="12sp"
+                                android:text="@string/do_share"
+                                android:textSize="12sp"
+                                app:layout_constraintLeft_toRightOf="@id/icon_share"
+                                app:layout_constraintTop_toBottomOf="@id/view_2nd_divider" />
+
+                            <View
+                                android:id="@+id/view_3rd_divider"
+                                android:layout_width="0.5sp"
+                                android:layout_height="20sp"
+                                android:layout_marginTop="10sp"
+                                android:background="@color/tab_unselected_txt"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintRight_toRightOf="parent"
+                                app:layout_constraintTop_toBottomOf="@id/view_2nd_divider" />
+
+                            <ImageView
+                                android:id="@+id/icon_heart"
+                                android:layout_width="23sp"
+                                android:layout_height="23sp"
+                                android:layout_marginTop="10sp"
+                                android:layout_marginRight="30sp"
+                                android:background="@drawable/icon_heart"
+                                app:layout_constraintLeft_toRightOf="@id/view_3rd_divider"
+                                app:layout_constraintRight_toRightOf="parent"
+                                app:layout_constraintTop_toBottomOf="@id/view_2nd_divider" />
+
+                            <TextView
+                                android:id="@+id/txt_like"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="3sp"
+                                android:layout_marginTop="12sp"
+                                android:text="@string/like_this"
+                                android:textSize="12sp"
+                                app:layout_constraintLeft_toRightOf="@id/icon_heart"
+                                app:layout_constraintTop_toBottomOf="@id/view_2nd_divider" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="3sp"
+                                android:layout_marginTop="12sp"
+                                android:text="@string/like_count"
+                                android:textColor="@color/tab_unselected_txt"
+                                android:textSize="12sp"
+                                app:layout_constraintLeft_toRightOf="@id/txt_like"
+                                app:layout_constraintTop_toBottomOf="@id/view_2nd_divider" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="150sp"
+                        android:layout_margin="10sp"
+                        android:background="@drawable/img_montblanc_ad" />
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/card_pisik_pisik"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="15sp"
+                        app:cardCornerRadius="10sp">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/kkt_peach_fragment_background"
+                            android:padding="15dp">
+
+                            <ImageView
+                                android:id="@+id/img_pisik"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:layout_marginTop="20sp"
+                                android:src="@drawable/icon_pisik"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="23sp"
+                                android:text="@string/Card_pisik"
+                                android:textSize="15sp"
+                                android:textStyle="bold"
+                                app:layout_constraintLeft_toRightOf="@id/img_pisik"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <ImageButton
+                                android:layout_width="35sp"
+                                android:layout_height="25sp"
+                                android:layout_marginTop="18sp"
+                                android:layout_marginRight="5sp"
+                                android:background="@drawable/icon_kkt_channel"
+                                app:layout_constraintRight_toLeftOf="@id/pisik_menu"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <ImageButton
+                                android:id="@+id/pisik_menu"
+                                android:layout_width="20sp"
+                                android:layout_height="20sp"
+                                android:layout_marginTop="20sp"
+                                android:background="@drawable/icon_menu"
+                                app:layout_constraintRight_toRightOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:id="@+id/txt_pisik_article"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10sp"
+                                android:text="@string/pisik_title"
+                                android:textSize="20sp"
+                                android:textStyle="bold"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintTop_toBottomOf="@id/img_pisik" />
+
+                            <TextView
+                                android:id="@+id/txt_pisik_time"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="2sp"
+                                android:text="@string/pisik_time"
+                                android:textColor="@color/tab_unselected_txt"
+                                android:textSize="12sp"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintTop_toBottomOf="@id/txt_pisik_article" />
+
+
+                            <TextView
+                                android:id="@+id/txt_pisik_content"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="13sp"
+                                android:text="@string/pisik_content"
+                                android:textSize="17sp"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintTop_toBottomOf="@id/txt_pisik_time" />
+
+                            <View
+                                android:id="@+id/pisik_1st_divider"
+                                android:layout_width="match_parent"
+                                android:layout_height="0.7sp"
+                                android:layout_margin="10sp"
+                                android:background="@color/tab_unselected_txt"
+                                app:layout_constraintBottom_toTopOf="@id/layout_company"
+                                app:layout_constraintTop_toBottomOf="@id/txt_pisik_content" />
+
+                            <LinearLayout
+                                android:id="@+id/layout_company"
+                                android:layout_width="0sp"
+                                android:layout_height="0sp"
+                                android:layout_marginRight="10sp"
+                                android:orientation="vertical"
+                                app:layout_constraintHeight_percent="0.45"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintRight_toLeftOf="@id/layout_dangun"
+                                app:layout_constraintTop_toBottomOf="@id/pisik_1st_divider">
+
+                                <ImageView
+                                    android:id="@+id/img_company"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="80sp"
+                                    android:layout_marginTop="10sp"
+                                    android:background="@drawable/img_company" />
+
+                                <TextView
+                                    android:id="@+id/txt_company"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="10sp"
+                                    android:layout_marginTop="13sp"
+                                    android:text="@string/company_title"
+                                    android:textSize="15sp" />
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+
+                                    <ImageView
+                                        android:id="@+id/img_zzokbbang_logo"
+                                        android:layout_width="20sp"
+                                        android:layout_height="20sp"
+                                        android:layout_marginTop="7sp"
+                                        android:background="@drawable/icon_cafe"
+                                        app:layout_constraintLeft_toLeftOf="parent"
+                                        app:layout_constraintTop_toBottomOf="@id/txt_company" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="3sp"
+                                        android:layout_marginTop="6sp"
+                                        android:text="@string/zzokbbang"
+                                        android:textColor="@color/tab_unselected_txt"
+                                        android:textSize="13sp"
+                                        app:layout_constraintLeft_toRightOf="@id/img_zzokbbang_logo"
+                                        app:layout_constraintTop_toBottomOf="@id/txt_company" />
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/layout_dangun"
+                                android:layout_width="0sp"
+                                android:layout_height="0sp"
+                                android:layout_marginLeft="10sp"
+                                android:orientation="vertical"
+                                app:layout_constraintHeight_percent="0.45"
+                                app:layout_constraintLeft_toRightOf="@id/layout_company"
+                                app:layout_constraintRight_toRightOf="parent"
+                                app:layout_constraintTop_toBottomOf="@id/pisik_1st_divider">
+
+                                <ImageView
+                                    android:id="@+id/img_dangun"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="80sp"
+                                    android:layout_marginTop="10sp"
+                                    android:background="@drawable/img_dangun" />
+
+                                <TextView
+                                    android:id="@+id/txt_dangun"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="17sp"
+                                    android:text="@string/dangun_title"
+                                    android:textSize="15sp" />
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+
+                                    <ImageView
+                                        android:id="@+id/img_ejong_logo"
+                                        android:layout_width="20sp"
+                                        android:layout_height="20sp"
+
+                                        android:layout_marginTop="5.5sp"
+                                        android:src="@drawable/icon_cafe" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="2.5sp"
+                                        android:layout_marginTop="5.5sp"
+                                        android:text="@string/ejong"
+                                        android:textColor="@color/tab_unselected_txt"
+                                        android:textSize="13sp" />
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                            <TextView
+                                android:id="@+id/txt_see_more1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10sp"
+                                android:gravity="center"
+                                android:text="@string/see_more"
+                                android:textColor="@color/tab_unselected_txt"
+                                android:textSize="11sp"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintRight_toRightOf="parent"
+                                app:layout_constraintTop_toBottomOf="@id/layout_dangun" />
+
+                            <View
+                                android:id="@+id/pisik_2nd_divider"
+                                android:layout_width="match_parent"
+                                android:layout_height="0.7sp"
+                                android:layout_marginTop="20sp"
+                                android:layout_marginHorizontal="10sp"
+                                android:background="@color/tab_unselected_txt"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintRight_toRightOf="parent"
+                                app:layout_constraintTop_toBottomOf="@id/txt_see_more1" />
+
+                            <ImageView
+                                android:id="@+id/icon_share1"
+                                android:layout_width="25sp"
+                                android:layout_height="25sp"
+                                android:layout_marginTop="10sp"
+                                android:layout_marginRight="50sp"
+                                android:background="@drawable/icon_share"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintRight_toLeftOf="@id/pisik_3rd_divider"
+                                app:layout_constraintTop_toBottomOf="@id/pisik_2nd_divider" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="3sp"
+                                android:layout_marginTop="12sp"
+                                android:text="@string/do_share"
+                                android:textSize="12sp"
+                                app:layout_constraintLeft_toRightOf="@id/icon_share1"
+                                app:layout_constraintTop_toBottomOf="@id/pisik_2nd_divider" />
+
+                            <View
+                                android:id="@+id/pisik_3rd_divider"
+                                android:layout_width="0.5sp"
+                                android:layout_height="20sp"
+                                android:layout_marginTop="10sp"
+                                android:background="@color/tab_unselected_txt"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintRight_toRightOf="parent"
+                                app:layout_constraintTop_toBottomOf="@id/pisik_2nd_divider" />
+
+                            <ImageView
+                                android:id="@+id/icon_heart1"
+                                android:layout_width="23sp"
+                                android:layout_height="23sp"
+                                android:layout_marginTop="10sp"
+                                android:layout_marginRight="30sp"
+                                android:background="@drawable/icon_heart"
+                                app:layout_constraintLeft_toRightOf="@id/pisik_3rd_divider"
+                                app:layout_constraintRight_toRightOf="parent"
+                                app:layout_constraintTop_toBottomOf="@id/pisik_2nd_divider" />
+
+                            <TextView
+                                android:id="@+id/txt_like1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="3sp"
+                                android:layout_marginTop="12sp"
+                                android:text="@string/like_this"
+                                android:textSize="12sp"
+                                app:layout_constraintLeft_toRightOf="@id/icon_heart1"
+                                app:layout_constraintTop_toBottomOf="@id/pisik_2nd_divider" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="3sp"
+                                android:layout_marginTop="12sp"
+                                android:text="@string/like_count_1"
+                                android:textColor="@color/tab_unselected_txt"
+                                android:textSize="12sp"
+                                app:layout_constraintLeft_toRightOf="@id/txt_like1"
+                                app:layout_constraintTop_toBottomOf="@id/pisik_2nd_divider" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="200sp" />
+
+                </LinearLayout>
+
+            </ScrollView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </FrameLayout>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bottom_nav_background"
+        app:labelVisibilityMode="unlabeled"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical">
+
+            <ImageButton
+                android:id="@+id/btn_firendList"
+                android:layout_width="40sp"
+                android:layout_height="40sp"
+                android:background="@drawable/menu_friendlist"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/btn_chatList"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageButton
+                android:id="@+id/btn_chatList"
+                android:layout_width="40sp"
+                android:layout_height="40sp"
+                android:background="@drawable/menu_chatlist"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/btn_firendList"
+                app:layout_constraintRight_toLeftOf="@id/btn_viewList"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageButton
+                android:id="@+id/btn_viewList"
+                android:layout_width="40sp"
+                android:layout_height="40sp"
+                android:background="@drawable/menu_viewlist"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/btn_chatList"
+                app:layout_constraintRight_toLeftOf="@id/btn_shopList"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageButton
+                android:id="@+id/btn_shopList"
+                android:layout_width="40sp"
+                android:layout_height="40sp"
+                android:background="@drawable/menu_shoplist"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/btn_viewList"
+                app:layout_constraintRight_toLeftOf="@id/btn_settingList"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageButton
+                android:id="@+id/btn_settingList"
+                android:layout_width="40sp"
+                android:layout_height="40sp"
+                android:background="@drawable/menu_settinglist"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/btn_shopList"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

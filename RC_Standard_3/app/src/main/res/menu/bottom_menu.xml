@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/bottom_home"
+        android:title="홈"
+        android:icon="@drawable/icon_home"
+        app:showAsAction="withText"/>
+
+    <item
+        android:id="@+id/bottom_village"
+        android:title="동네생활"
+        android:icon="@drawable/icon_village"
+        android:enabled="true"/>
+
+    <item
+        android:id="@+id/bottom_near"
+        android:title="내 근처"
+        android:icon="@drawable/icon_location" />
+
+    <item
+        android:id="@+id/bottom_chat"
+        android:title="채팅"
+        android:icon="@drawable/icon_chatting" />
+
+    <item
+        android:id="@+id/bottom_user"
+        android:title="나의 당근"
+        android:icon="@drawable/icon_user" />
+
+</menu>

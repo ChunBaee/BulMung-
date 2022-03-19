@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <Spinner
+            android:id="@+id/board_spinner"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/board_recycler"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_goneMarginTop="10dp"
+            />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/board_recycler"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:padding="10dp"
+            app:layout_constraintBottom_toTopOf="@id/board_write_btn"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/board_spinner"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/board_item_shape" />
+
+        <Button
+            android:id="@+id/board_write_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="글쓰기"
+            app:layout_constraintTop_toBottomOf="@id/board_recycler"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/board_find_imagebutton"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"/>
+
+        <TextView
+            android:id="@+id/board_find_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:text="게시글 검색"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@id/board_pagingButton"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/board_find_edittext"
+            app:layout_constraintTop_toBottomOf="@id/board_write_btn"
+            app:layout_constraintVertical_bias="0.263" />
+
+        <EditText
+            android:id="@+id/board_find_edittext"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/board_write_btn"
+            app:layout_constraintBottom_toTopOf="@id/board_pagingButton"
+            app:layout_constraintRight_toRightOf="@id/board_find_imagebutton"
+            app:layout_constraintLeft_toRightOf="@id/board_find_text"
+            android:layout_marginRight="10dp"/>
+
+        <ImageButton
+            android:id="@+id/board_find_imagebutton"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/find_icon"
+            app:layout_constraintTop_toBottomOf="@id/board_write_btn"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/board_find_edittext" />
+
+        <com.lakue.pagingbutton.LakuePagingButton
+            android:id="@+id/board_pagingButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="50dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/board_find_edittext" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

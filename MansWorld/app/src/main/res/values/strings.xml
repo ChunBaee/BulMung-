@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">남성시대</string>
+
+    <string-array name="board_list">
+        <item>공지사항</item>
+        <item>자유 게시판</item>
+        <item>팁과 노하우</item>
+        <item>질문 게시판</item>
+    </string-array>
+
+    <string-array name="show_board_list">
+        <item>전체글보기</item>
+        <item>공지사항</item>
+        <item>자유 게시판</item>
+        <item>팁과 노하우</item>
+        <item>질문 게시판</item>
+    </string-array>
+
+</resources>

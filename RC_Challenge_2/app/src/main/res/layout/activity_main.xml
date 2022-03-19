@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fbutton="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background">
+
+        <ImageButton
+            android:id="@+id/icon_new"
+            android:layout_width="95sp"
+            android:layout_height="45sp"
+            android:layout_margin="20sp"
+            android:background="@drawable/icon_new"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/icon_setting"
+            android:layout_width="35sp"
+            android:layout_height="35sp"
+            android:layout_margin="20sp"
+            android:background="@drawable/icon_setting"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/icon_paybot"
+            android:layout_width="35sp"
+            android:layout_height="35sp"
+            android:layout_marginTop="21sp"
+            android:layout_marginRight="15sp"
+            android:background="@drawable/icon_headset"
+            app:layout_constraintRight_toLeftOf="@id/icon_setting"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/mContainer"
+            android:layout_width="match_parent"
+            android:layout_height="0sp"
+            android:layout_marginTop="35sp"
+            android:foregroundGravity="center|fill"
+            app:layout_constraintHeight_percent="0.50"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/icon_new">
+
+        </androidx.viewpager2.widget.ViewPager2>
+
+        <me.relex.circleindicator.CircleIndicator3
+            android:id="@+id/indicator"
+            android:layout_width="match_parent"
+            android:layout_height="48sp"
+            app:layout_constraintTop_toBottomOf="@id/mContainer" />
+
+        <ImageView
+            android:id="@+id/img_ryon"
+            android:layout_width="85sp"
+            android:layout_height="105sp"
+            android:layout_marginStart="30sp"
+            android:layout_marginTop="15sp"
+            android:background="@drawable/img_ryon"
+            app:layout_constraintBottom_toTopOf="@id/bottom_nav_layout"
+            app:layout_constraintLeft_toLeftOf="parent" />
+
+        <Button
+            android:id="@+id/btn_see_all"
+            android:layout_width="wrap_content"
+            android:layout_height="35sp"
+            android:layout_marginBottom="20sp"
+            android:background="@drawable/btn_seeall"
+            android:text="전체 보기"
+            android:textSize="13sp"
+            app:layout_constraintBottom_toTopOf="@id/bottom_nav_layout"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:id="@+id/bottom_nav_layout"
+            android:layout_width="match_parent"
+            android:layout_height="0sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            fbutton:layout_constraintHeight_percent="0.20">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.sothree.slidinguppanel.SlidingUpPanelLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="500sp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:gravity="bottom"
+                    app:umanoDragView="@id/drawer_tab"
+                    app:umanoOverlay="true"
+                    app:umanoPanelHeight="50sp"
+                    app:umanoShadowHeight="0sp">
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/bottom_card"
+                        android:layout_width="match_parent"
+                        android:layout_height="100sp"
+                        android:layout_marginBottom="50sp"
+                        app:cardBackgroundColor="@color/background_youtube"
+                        app:cardCornerRadius="20sp"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/drawer_tab"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="15sp">
+
+                            <Button
+                                android:id="@+id/btn_gyoljae"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@color/noColor"
+                                android:text="결제"
+                                android:textSize="20sp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintRight_toLeftOf="@id/btn_membership"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <Button
+                                android:id="@+id/btn_membership"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@color/noColor"
+                                android:text="멤버십"
+                                android:textSize="20sp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintLeft_toRightOf="@id/btn_gyoljae"
+                                app:layout_constraintRight_toLeftOf="@id/btn_songum"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <Button
+                                android:id="@+id/btn_songum"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@color/noColor"
+                                android:text="송금"
+                                android:textSize="20sp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintLeft_toRightOf="@id/btn_membership"
+                                app:layout_constraintRight_toRightOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </com.google.android.material.card.MaterialCardView>
+                    <View
+                        android:layout_width="0sp"
+                        android:layout_height="0sp" />
+
+                </com.sothree.slidinguppanel.SlidingUpPanelLayout>
+
+
+                    <com.google.android.material.bottomnavigation.BottomNavigationView
+                        android:id="@+id/bottom_nav"
+                        android:layout_width="match_parent"
+                        android:layout_height="80sp"
+                        android:layout_gravity="bottom"
+                        android:background="@color/background_youtube"
+                        android:elevation="0dp"
+                        app:itemHorizontalTranslationEnabled="true"
+                        app:labelVisibilityMode="labeled"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:menu="@menu/bottom_nav_menu">
+
+                        <com.google.android.material.floatingactionbutton.FloatingActionButton
+                            android:id="@+id/btn_fab"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal|center"
+                            android:backgroundTint="#FFFDE605"
+                            android:elevation="0dp"
+                            android:src="@drawable/icon_qrcode"
+                            app:fabCustomSize="55sp"
+                            app:maxImageSize="25sp" />
+
+
+                    </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

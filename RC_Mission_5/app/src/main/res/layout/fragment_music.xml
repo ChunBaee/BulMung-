@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="70sp">
+
+        <ImageView
+            android:id="@+id/background"
+            android:background="@drawable/img_back_exam"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <com.github.mmin18.widget.RealtimeBlurView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:realtimeBlurRadius="100sp"
+            app:realtimeOverlayColor="#8000" />
+
+        <ImageView
+            android:layout_width="20sp"
+            android:layout_height="20sp"
+            android:src="@drawable/icon_music"
+            android:layout_marginRight="5sp"
+
+            app:layout_constraintTop_toTopOf="@id/music_title"
+            app:layout_constraintBottom_toBottomOf="@id/music_title"
+            app:layout_constraintRight_toLeftOf="@id/music_title"
+            />
+
+        <TextView
+            android:id="@+id/music_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TITLE"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:layout_marginTop="10sp"
+            app:layout_constraintHorizontal_bias="0.52"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent" />
+
+        <TextView
+            android:id="@+id/music_singer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SINGER"
+            android:textSize="13sp"
+            android:textColor="@color/gray"
+            android:layout_marginTop="8sp"
+            app:layout_constraintTop_toBottomOf="@id/music_title"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"/>
+
+        <ImageView
+            android:id="@+id/music_down_arrow"
+            android:layout_width="25sp"
+            android:layout_height="25sp"
+            android:src="@drawable/icon_down_arrow"
+            android:layout_margin="10sp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+
+        <ImageView
+            android:layout_width="25sp"
+            android:layout_height="25sp"
+            android:src="@drawable/icon_more_info"
+            android:layout_marginRight="10sp"
+            android:layout_marginTop="15sp"
+            app:layout_constraintTop_toBottomOf="@id/music_down_arrow"
+            app:layout_constraintRight_toRightOf="parent" />
+
+        <ImageView
+            android:id="@+id/music_album"
+            android:layout_width="0sp"
+            android:layout_height="0sp"
+            android:src="@drawable/img_back_exam"
+            app:layout_constraintWidth_percent="0.85"
+            app:layout_constraintHeight_percent="0.4"
+            app:layout_constraintVertical_bias="0.25"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+
+
+        <ImageView
+            android:id="@+id/music_heart"
+            android:layout_width="25sp"
+            android:layout_height="25sp"
+            android:src="@drawable/icon_empty_heart"
+            android:layout_marginTop="15sp"
+            app:layout_constraintTop_toBottomOf="@id/music_album"
+            app:layout_constraintLeft_toLeftOf="@id/music_album" />
+
+        <TextView
+            android:id="@+id/music_heart_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="3,000"
+            android:textColor="@color/gray"
+            android:layout_marginLeft="12sp"
+            app:layout_constraintTop_toTopOf="@id/music_heart"
+            app:layout_constraintBottom_toBottomOf="@id/music_heart"
+            app:layout_constraintLeft_toRightOf="@id/music_heart" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="유사곡"
+            android:textColor="@color/white"
+            android:paddingVertical="5sp"
+            android:paddingHorizontal="8sp"
+            android:background="@drawable/btn_similar"
+            android:layout_marginRight="15sp"
+            app:layout_constraintTop_toTopOf="@id/music_instagram"
+            app:layout_constraintBottom_toBottomOf="@id/music_instagram"
+            app:layout_constraintRight_toLeftOf="@id/music_instagram"/>
+
+        <ImageView
+            android:id="@+id/music_instagram"
+            android:layout_width="25sp"
+            android:layout_height="25sp"
+            android:src="@drawable/icon_instagram"
+            android:layout_marginTop="15sp"
+            app:layout_constraintTop_toBottomOf="@id/music_album"
+            app:layout_constraintEnd_toEndOf="@id/music_album" />
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/music_heart_anim"
+            android:layout_width="0sp"
+            android:layout_height="0sp"
+            app:lottie_fileName="4837-heart.json"
+            android:visibility="invisible"
+            android:clickable="false"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintWidth_percent="0.5"
+            app:layout_constraintHeight_percent="0.35"
+            />
+
+
+        <ScrollView
+            android:id="@+id/layout_lyric"
+            android:layout_width="0sp"
+            android:layout_height="0sp"
+            app:layout_constraintHeight_percent="0.2"
+            app:layout_constraintWidth_percent="0.9"
+            app:layout_constraintVertical_bias="0.3"
+            app:layout_constraintTop_toBottomOf="@id/music_instagram"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:scrollbars="none">
+
+            <TextView
+                android:id="@+id/music_lyric"
+                android:text="rkskek"
+                android:textColor="@color/gray"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:gravity="center"/>
+
+        </ScrollView>
+
+        <com.mackhartley.roundedprogressbar.RoundedProgressBar
+            android:id="@+id/music_progress"
+            android:layout_width="0sp"
+            android:layout_height="3sp"
+            app:layout_constraintTop_toBottomOf="@id/layout_lyric"
+            app:layout_constraintWidth_percent="0.8"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:rpbShowProgressText="false"
+            app:rpbProgressColor="@color/bottom_icon_selected"
+            app:rpbBackgroundColor="@color/gray" />
+
+        <TextView
+            android:id="@+id/music_cur_min"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0:00"
+            android:textColor="@color/bottom_icon_selected"
+            app:layout_constraintTop_toBottomOf="@id/music_progress"
+            app:layout_constraintStart_toStartOf="@id/music_progress"/>
+
+        <TextView
+            android:id="@+id/music_finish_min"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/bottom_icon_selected"
+            app:layout_constraintTop_toBottomOf="@id/music_progress"
+            app:layout_constraintEnd_toEndOf="@id/music_progress" />
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

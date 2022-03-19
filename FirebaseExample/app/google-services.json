@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "948581202045",
+    "firebase_url": "https://fir-example-64fcc-default-rtdb.firebaseio.com",
+    "project_id": "fir-example-64fcc",
+    "storage_bucket": "fir-example-64fcc.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:948581202045:android:3a0ec7d1b9fcdb497d9914",
+        "android_client_info": {
+          "package_name": "com.solie.firebaseexample"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "948581202045-nk3o152pgeqd5amcekljnprodqus39o4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAtdo4A9PtyQ93BDiK2HL5_h8CZ1Cbk3FI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "948581202045-nk3o152pgeqd5amcekljnprodqus39o4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

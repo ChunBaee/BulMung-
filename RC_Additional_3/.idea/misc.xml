@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="app/src/main/res/drawable/background_login_naver.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/btn_dm_list.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/btn_dm_list_clicked.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/btn_dm_list_unclicked.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/btn_invite.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/item_personal_message.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/placeholder.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/selector_bottomview_icon_color.xml" value="0.1035" />
+        <entry key="app/src/main/res/layout/activity_login.xml" value="0.165" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/fragment_direct_message.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/item_channel_inner.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/item_chatroom_message.xml" value="0.10377358490566038" />
+        <entry key="app/src/main/res/layout/item_dm_list.xml" value="0.335" />
+        <entry key="app/src/main/res/layout/item_personal_message.xml" value="0.14492753623188406" />
+        <entry key="app/src/main/res/layout/view_dm_list.xml" value="0.35563380281690143" />
+        <entry key="app/src/main/res/menu/bottom_menu.xml" value="0.25555555555555554" />
+        <entry key="app/src/main/res/menu/main_menu.xml" value="0.2574074074074074" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

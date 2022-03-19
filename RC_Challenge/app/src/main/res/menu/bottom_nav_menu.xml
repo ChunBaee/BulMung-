@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/friendList_frag"
+        android:icon="@drawable/menu_friendlist"
+        android:title="@string/friendList"/>
+
+    <item
+        android:id="@+id/chatList_frag"
+        android:icon="@drawable/menu_chatlist"
+        android:title="@string/chatList" />
+
+    <item
+        android:id="@+id/viewList_frag"
+        android:icon="@drawable/menu_viewlist"
+        android:title="@string/viewList" />
+
+    <item
+        android:id="@+id/shopList_frag"
+        android:icon="@drawable/menu_shoplist"
+        android:title="@string/shopList" />
+
+    <item
+        android:id="@+id/settingList_frag"
+        android:icon="@drawable/menu_settinglist"
+        android:title="@string/settingList" />
+
+</menu>

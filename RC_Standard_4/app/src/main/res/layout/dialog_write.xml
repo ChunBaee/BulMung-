@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/no_color"
+        android:fillViewport="true">
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/no_color"
+            app:cardBackgroundColor="@color/memo_less_dark"
+            app:cardCornerRadius="5sp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10sp">
+
+                <ImageView
+                    android:id="@+id/img_dialog"
+                    android:layout_width="50sp"
+                    android:layout_height="40sp"
+                    android:layout_marginLeft="5sp"
+                    android:layout_marginTop="5sp"
+                    android:background="@drawable/img_dialog"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/txt_dialog_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5sp"
+                    android:layout_marginTop="5sp"
+                    android:text="title"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+                    app:layout_constraintLeft_toRightOf="@id/img_dialog"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/txt_dialog_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5sp"
+                    android:text="time"
+                    android:textColor="@color/memo_gray"
+                    android:textSize="12sp"
+                    app:layout_constraintLeft_toRightOf="@id/img_dialog"
+                    app:layout_constraintTop_toBottomOf="@id/txt_dialog_title" />
+
+                <ImageButton
+                    android:id="@+id/btn_dismiss1"
+                    android:layout_width="30sp"
+                    android:layout_height="30sp"
+                    android:background="@drawable/icon_circle"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageButton
+                    android:id="@+id/btn_dismiss2"
+                    android:layout_width="20sp"
+                    android:layout_height="20sp"
+                    android:background="@drawable/icon_x"
+                    app:layout_constraintBottom_toBottomOf="@id/btn_dismiss1"
+                    app:layout_constraintEnd_toEndOf="@id/btn_dismiss1"
+                    app:layout_constraintStart_toStartOf="@id/btn_dismiss1"
+                    app:layout_constraintTop_toTopOf="@id/btn_dismiss1" />
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/stat_scan"
+                    android:layout_width="0sp"
+                    android:layout_height="90sp"
+                    android:layout_marginTop="20sp"
+                    app:cardBackgroundColor="@color/dialog_status_color"
+                    app:cardCornerRadius="10sp"
+                    app:cardPreventCornerOverlap="false"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toLeftOf="@id/stat_pin"
+                    app:layout_constraintTop_toBottomOf="@id/img_dialog"
+                    app:layout_constraintWidth_percent="0.22">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:id="@+id/img_scan"
+                            android:layout_width="40sp"
+                            android:layout_height="40sp"
+                            android:src="@drawable/icon_scan"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_bias="0.25" />
+
+                        <TextView
+                            android:id="@+id/title_scan"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="스캔"
+                            android:textColor="@color/dialog_scan_color"
+                            android:textSize="15sp"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_bias="0.8" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/stat_pin"
+                    android:layout_width="0sp"
+                    android:layout_height="90sp"
+                    android:layout_marginTop="20sp"
+                    app:cardCornerRadius="10sp"
+                    app:cardPreventCornerOverlap="false"
+                    app:layout_constraintLeft_toRightOf="@id/stat_scan"
+                    app:layout_constraintRight_toLeftOf="@id/stat_lock"
+                    app:layout_constraintTop_toBottomOf="@id/img_dialog"
+                    app:layout_constraintWidth_percent="0.22">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/dialog_status_color">
+
+                        <ImageView
+                            android:id="@+id/img_pin"
+                            android:layout_width="36sp"
+                            android:layout_height="36sp"
+                            android:src="@drawable/icon_pin"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_bias="0.25" />
+
+                        <TextView
+                            android:id="@+id/title_pin"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="고정"
+                            android:textColor="@color/dialog_pin_color"
+                            android:textSize="15sp"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_bias="0.8" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/stat_lock"
+                    android:layout_width="0sp"
+                    android:layout_height="90sp"
+                    android:layout_marginTop="20sp"
+                    app:cardCornerRadius="10sp"
+                    app:cardPreventCornerOverlap="false"
+                    app:layout_constraintLeft_toRightOf="@id/stat_pin"
+                    app:layout_constraintRight_toLeftOf="@id/stat_trash"
+                    app:layout_constraintTop_toBottomOf="@id/img_dialog"
+                    app:layout_constraintWidth_percent="0.22">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/dialog_status_color">
+
+                        <ImageView
+                            android:id="@+id/img_lock"
+                            android:layout_width="30sp"
+                            android:layout_height="35sp"
+                            android:src="@drawable/icon_lock"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_bias="0.25" />
+
+                        <TextView
+                            android:id="@+id/title_lock"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="잠그기"
+                            android:textColor="@color/dialog_lock_color"
+                            android:textSize="15sp"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_bias="0.8" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/stat_trash"
+                    android:layout_width="0sp"
+                    android:layout_height="90sp"
+                    android:layout_marginTop="20sp"
+                    app:cardCornerRadius="10sp"
+                    app:cardPreventCornerOverlap="false"
+                    app:layout_constraintLeft_toRightOf="@id/stat_lock"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/img_dialog"
+                    app:layout_constraintWidth_percent="0.22">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/dialog_status_color">
+
+                        <ImageView
+                            android:id="@+id/img_trash"
+                            android:layout_width="43sp"
+                            android:layout_height="43sp"
+                            android:src="@drawable/icon_trash"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_bias="0.25" />
+
+                        <TextView
+                            android:id="@+id/title_stat"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="삭제"
+                            android:textColor="@color/dialog_trash_color"
+                            android:textSize="15sp"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_bias="0.8" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/layout_rv1"
+                    android:layout_width="0sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15sp"
+                    app:cardCornerRadius="5sp"
+                    android:background="@drawable/round_border"
+                    app:layout_constraintWidth_percent="0.95"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/stat_scan">
+
+                    <ListView
+                        android:id="@+id/stat_rv1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        tools:listitem="@layout/item_dialog_list"
+                        android:scrollbars="none"/>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/layout_rv2"
+                    android:layout_width="0sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15sp"
+                    android:background="@drawable/round_border"
+                    app:layout_constraintWidth_percent="0.95"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/layout_rv1">
+
+                    <ListView
+                        android:id="@+id/stat_rv2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        tools:listitem="@layout/item_dialog_list"
+                        android:scrollbars="none"/>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/layout_rv3"
+                    android:layout_width="0sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15sp"
+                    android:background="@drawable/round_border"
+                    app:layout_constraintWidth_percent="0.95"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/layout_rv2">
+
+                    <ListView
+                        android:id="@+id/stat_rv3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        tools:listitem="@layout/item_dialog_list"
+                        android:scrollbars="none"/>
+
+                </com.google.android.material.card.MaterialCardView>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </androidx.core.widget.NestedScrollView>
+
+</layout>

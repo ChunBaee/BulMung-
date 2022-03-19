@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <fragment
+            android:id="@+id/mapFrag"
+            android:name="com.naver.maps.map.MapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <EditText
+            android:id="@+id/edt_location"
+            android:layout_width="0sp"
+            android:layout_height="?actionBarSize"
+            android:layout_marginLeft="10sp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/btn_location"
+            android:background="@color/white"/>
+
+        <Button
+            android:id="@+id/btn_location"
+            android:layout_width="wrap_content"
+            android:layout_height="?actionBarSize"
+            android:text="찾기"
+            app:layout_constraintTop_toTopOf="@id/edt_location"
+            app:layout_constraintBottom_toBottomOf="@id/edt_location"
+            app:layout_constraintRight_toRightOf="parent" />
+
+        <Button
+            android:id="@+id/GEO"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="GEO"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

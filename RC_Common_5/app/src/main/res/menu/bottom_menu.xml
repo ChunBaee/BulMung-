@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/bottom_home"
+        android:title="홈"
+        android:icon="@drawable/icon_home" />
+
+    <item
+        android:id="@+id/bottom_trend"
+        android:title="트렌드"
+        android:icon="@drawable/icon_trend" />
+
+    <item
+        android:id="@+id/bottom_broadcast"
+        android:title="음악방송"
+        android:icon="@drawable/icon_broadcast" />
+
+    <item
+        android:id="@+id/bottom_search"
+        android:title="검색"
+        android:icon="@drawable/icon_search" />
+
+    <item
+        android:id="@+id/bottom_drawer"
+        android:title="음악서랍"
+        android:icon="@drawable/icon_drawer" />
+
+</menu>

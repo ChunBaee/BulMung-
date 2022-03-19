@@ -1,0 +1,59 @@
+<resources>
+    <string name="app_name">My Project</string>
+    <string name="walls"> | </string>
+    <string name="movie_list">영화 목록</string>
+    <string name="view_more">상세보기</string>
+
+
+    <string name="rate">예매율</string>
+    <string name="viewer_count">누적관객수</string>
+    <string name="synopsys">줄거리</string>
+
+    <string name="dir_act">감독/출연</string>
+    <string name="dir">감독</string>
+    <string name="act">출연</string>
+
+    <string name="simple_review">한줄평</string>
+    <string name="review_write">작성하기</string>
+    <string name="see_all_review">모두 보기</string>
+    <string name="go_to_reserv">예매하기</string>
+
+
+    <string name="reviewer_name">kym71**</string>
+    <string name="review_time">10분전</string>
+    <string name="review_main">적당히 재밌다. 오랜만에 잠 안오는 영화 봤네요.</string>
+    <string name="reviewer_name2">angel**</string>
+    <string name="review_time2">15분전</string>
+    <string name="review_main2">웃긴 내용보다는 좀 더 진지한 영화</string>
+    <string name="reviewer_name3">beaut**</string>
+    <string name="review_time3">16분전</string>
+    <string name="review_main3">연기가 부족한 느낌이 드는 배우도 있다. 그래도 전체적으로는 재밌다.</string>
+    <string name="reviewer_name4">sales**</string>
+    <string name="review_time4">18분전</string>
+    <string name="review_main4">예제에 없어서 무슨 내용을 써야 할 지 모르겠다. 아무튼 재밌다.</string>
+
+
+    <string name="good_review">추천</string>
+    <string name="good_review_count">0</string>
+    <string name="warning">신고하기</string>
+
+
+    <string name="input_rating">평점을 입력해 주세요</string>
+    <string name="under_100_please">100자 이내로 작성해주세요.</string>
+    <string name="save">저 장</string>
+    <string name="cancel">취 소</string>
+
+    <string name="rating_number">8.2</string>
+    <string name="review_people_count">(1,142명 참여)</string>
+
+
+    <string name="nav_header_title">Mike</string>
+    <string name="nav_header_subtitle">mike.jung.global@gmail.com</string>
+
+    <string name="menu_list">영화 목록</string>
+    <string name="menu_api">영화 API</string>
+    <string name="menu_book">예매하기</string>
+    <string name="menu_setting">설정</string>
+    <string name="menu_settings">사용자 설정</string>
+
+</resources>

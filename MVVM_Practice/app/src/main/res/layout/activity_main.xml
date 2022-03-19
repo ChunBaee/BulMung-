@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".view.MainActivity" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="20dp" >
+
+        <EditText
+            android:id="@+id/name_edt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Input Name Please" />
+
+        <EditText
+            android:id="@+id/num_edt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Input Number Please" />
+
+        <EditText
+            android:id="@+id/adr_edt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Input Address Please" />
+
+        <Button
+            android:id="@+id/save_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SAVE" />
+
+    </LinearLayout>
+</layout>

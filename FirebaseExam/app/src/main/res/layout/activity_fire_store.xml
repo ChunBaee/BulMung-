@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".cloudstorage.FireStoreActivity">
+
+    <Button
+        android:id="@+id/fireStoreAddDataBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="데이터 추가"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/fireStoreSetDataBtn"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <Button
+        android:id="@+id/fireStoreSetDataBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="데이터 추가 (set)"
+        app:layout_constraintTop_toBottomOf="@+id/fireStoreAddDataBtn"
+        app:layout_constraintBottom_toTopOf="@id/fireStoreDeleteDocBtn"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <Button
+        android:id="@+id/fireStoreDeleteDocBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="데이터 삭제 (문서)"
+        app:layout_constraintTop_toBottomOf="@id/fireStoreSetDataBtn"
+        app:layout_constraintBottom_toTopOf="@+id/fireStoreDeleteFieldBtn"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <Button
+        android:id="@+id/fireStoreDeleteFieldBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="데이터 삭제 (필드)"
+        app:layout_constraintTop_toBottomOf="@id/fireStoreDeleteDocBtn"
+        app:layout_constraintBottom_toTopOf="@id/fireStoreSelectDataBtn"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <Button
+        android:id="@+id/fireStoreSelectDataBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="데이터 조회 (문서)"
+        app:layout_constraintTop_toBottomOf="@id/fireStoreDeleteFieldBtn"
+        app:layout_constraintBottom_toTopOf="@id/fireStoreSelWhereDataBtn"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <Button
+        android:id="@+id/fireStoreSelWhereDataBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="데이터 조회 (문서 - where)"
+        app:layout_constraintTop_toBottomOf="@id/fireStoreSelectDataBtn"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
