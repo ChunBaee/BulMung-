@@ -1,2 +1,0 @@
-include ':app'
-rootProject.name = "RC_Standard_4-2"

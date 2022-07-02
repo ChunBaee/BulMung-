@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/toolbar_img_hwahae_logo"
+            android:layout_width="52dp"
+            android:layout_height="37dp"
+            android:layout_margin="15dp"
+            android:background="@drawable/icon_hwahae_logo"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/toolbar_btn_edt_search"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/background_toolbar_search_edt"
+            android:layout_marginStart="17dp"
+            android:layout_marginVertical="3dp"
+            app:layout_constraintWidth_percent="0.64"
+            app:layout_constraintTop_toTopOf="@id/toolbar_img_hwahae_logo"
+            app:layout_constraintBottom_toBottomOf="@id/toolbar_img_hwahae_logo"
+            app:layout_constraintLeft_toRightOf="@id/toolbar_img_hwahae_logo" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="셀퓨전씨 카밍 다운 크림"
+                android:textColor="#AFAFAF"
+                android:textSize="12sp"
+                android:layout_marginStart="10dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent" />
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/icon_toolbar_search"
+                app:tint="#AFAFAF"
+                android:layout_marginEnd="10dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toRightOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <ImageView
+            android:id="@+id/toolbar_btn_shopping_list"
+            android:layout_width="25dp"
+            android:layout_height="0dp"
+            android:background="@drawable/icon_toolbar_shopping_list"
+            android:layout_marginVertical="5dp"
+            app:layout_constraintTop_toTopOf="@id/toolbar_btn_edt_search"
+            app:layout_constraintBottom_toBottomOf="@id/toolbar_btn_edt_search"
+            app:layout_constraintLeft_toRightOf="@id/toolbar_btn_edt_search"
+            app:layout_constraintRight_toRightOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

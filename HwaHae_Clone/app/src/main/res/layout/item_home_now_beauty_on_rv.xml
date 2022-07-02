@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="beautyOnItem"
+            type="com.jcorp.hwahae_clone.home.now.data.HomeNowBeautyOnItem" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="5dp"
+        android:layout_marginVertical="5dp">
+
+        <ImageView
+            android:id="@+id/item_home_now_beauty_on_image"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            showImgFromStorage="@{beautyOnItem.titleImage}"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/item_home_now_beauty_on_company"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{beautyOnItem.company}"
+            android:textSize="11sp"
+            android:textColor="@color/gray"
+            app:layout_constraintTop_toBottomOf="@id/item_home_now_beauty_on_image"
+            app:layout_constraintLeft_toLeftOf="parent" />
+
+        <TextView
+            android:id="@+id/item_home_now_beauty_on_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{beautyOnItem.title}"
+            android:textSize="14sp"
+            android:textColor="@color/black"
+            app:layout_constraintTop_toBottomOf="@id/item_home_now_beauty_on_company"
+            app:layout_constraintStart_toStartOf="@id/item_home_now_beauty_on_company" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    
+    <data>
+        <variable
+            name="item"
+            type="com.jcorp.hwahae_clone.home.now.data.HomeNowVerticalItem" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="5dp"
+        android:layout_marginVertical="5dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/item_home_now_vertical_image_layout"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:background="@drawable/form_home_shopping_image"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent">
+
+            <ImageView
+                android:layout_width="145dp"
+                android:layout_height="145dp"
+                showImgFromStorage="@{item.productImage}"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/item_home_now_vertical_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@{@string/home_now_shopping_vertical_name(item.company, item.title)}"
+            android:textSize="13.5sp"
+            app:layout_constraintTop_toBottomOf="@id/item_home_now_vertical_image_layout"
+            android:layout_gravity="start"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:maxLines="2"
+            android:ellipsize="end" />
+
+        <TextView
+            android:id="@+id/item_home_now_vertical_past_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:textColor="#B5B5B5"
+            setTextWithStrikeThrough="@{@string/home_now_shopping_price_won(item.pastPrice)}"
+            app:layout_constraintTop_toBottomOf="@id/item_home_now_vertical_title"
+            app:layout_constraintStart_toStartOf="@id/item_home_now_vertical_title" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="원"
+            android:textSize="12sp"
+            android:textColor="#B5B5B5"
+            app:layout_constraintTop_toTopOf="@id/item_home_now_vertical_past_price"
+            app:layout_constraintLeft_toRightOf="@id/item_home_now_vertical_past_price" />
+
+        <TextView
+            android:id="@+id/item_home_now_vertical_discount_percent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#F65050"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:text="@{@string/home_now_shopping_discount_percent(item.discountPercent)}"
+            app:layout_constraintTop_toBottomOf="@id/item_home_now_vertical_past_price"
+            app:layout_constraintStart_toStartOf="@id/item_home_now_vertical_past_price" />
+
+        <TextView
+            android:id="@+id/item_home_now_vertical_discount_percent_mark"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="%"
+            android:textColor="#F65050"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toTopOf="@id/item_home_now_vertical_discount_percent"
+            app:layout_constraintLeft_toRightOf="@id/item_home_now_vertical_discount_percent" />
+
+        <TextView
+            android:id="@+id/item_home_now_vertical_current_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            setTextWithFormatter="@{@string/home_now_shopping_price_won(item.currentPrice)}"
+            android:layout_marginStart="5dp"
+            app:layout_constraintTop_toTopOf="@id/item_home_now_vertical_discount_percent_mark"
+            app:layout_constraintBottom_toBottomOf="@id/item_home_now_vertical_discount_percent_mark"
+            app:layout_constraintLeft_toRightOf="@id/item_home_now_vertical_discount_percent_mark" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="원"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            app:layout_constraintTop_toTopOf="@id/item_home_now_vertical_current_price"
+            app:layout_constraintLeft_toRightOf="@id/item_home_now_vertical_current_price" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

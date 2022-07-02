@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">불멍</string>
+
+    <string name="home_edt_hint">검색어를 입력해주세요. ex)캠핑장 이름</string>
+    <string name="list_camping_address">%s %s</string>
+
+    <string name="detail_induty">업종구분 : %s</string>
+    <string name="detail_tel">전화번호 : %s</string>
+    <string name="detail_page">홈페이지 주소 : %s</string>
+    <string name="detail_pet">애완동물 동반 가능 여부 : %s</string>
+
+</resources>

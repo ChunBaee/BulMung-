@@ -1,0 +1,35 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.BulMung.Dark" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/purple_500</item>
+        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondaryVariant">@color/teal_700</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">@color/app_toolbar_color</item>
+        <!-- Customize your theme here. -->
+
+        <item name="android:colorBackground">@color/app_background_color</item>
+        <item name="android:textColor">@color/app_text_color</item>
+    </style>
+
+    <style name="mBackGround" parent="Theme.MaterialComponents" >
+        <item name="android:background">@color/app_background_color</item>
+    </style>
+
+    <style name="background_highLight" parent="Widget.MaterialComponents.CardView" >
+        <item name="cardBackgroundColor">@color/app_highlight_background_color</item>
+    </style>
+
+    <style name="background_toolbar" parent="Theme.MaterialComponents" >
+        <item name="android:background">@color/app_toolbar_color</item>
+    </style>
+
+    <style name="background_less_light" parent="Theme.MaterialComponents" >
+        <item name="android:background">@color/app_third_color</item>
+    </style>
+</resources>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/menu_bottom_home"
+        android:title="홈"
+        android:icon="@drawable/selector_main_bottom_home" />
+
+    <item
+        android:id="@+id/menu_bottom_shopping"
+        android:title="화해쇼핑"
+        android:icon="@drawable/selector_main_bottom_shopping" />
+
+    <item
+        android:id="@+id/menu_bottom_my"
+        android:title="MY"
+        android:icon="@drawable/selector_main_bottom_my" />
+
+    <item
+        android:title=""
+        app:showAsAction="never" />
+
+</menu>

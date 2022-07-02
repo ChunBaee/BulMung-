@@ -25,7 +25,7 @@ class mViewModel : ViewModel() {
     var mBossHealth = MutableLiveData<Int>(10000)
     var mBossDamage = 20
     var mPlayerHealth = MutableLiveData<Int>(1000)
-    var mPlayerDamage = MutableLiveData<Int>(3000)
+    var mPlayerDamage = MutableLiveData<Int>(50)
 
     private val _diceList = MutableLiveData<MutableList<DiceData>>()
     val diceList : LiveData<MutableList<DiceData>> = _diceList
@@ -40,7 +40,7 @@ class mViewModel : ViewModel() {
     val loadDataList : LiveData<MutableList<LoadData>> = _loadDataList
 
     fun addCurMoney() {
-        _currentMoney.postValue(_currentMoney.value!! + 1000)
+        _currentMoney.postValue(_currentMoney.value!! + 100)
     }
 
     fun calculateMoney() {
